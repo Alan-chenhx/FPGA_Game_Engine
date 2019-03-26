@@ -1,0 +1,6 @@
+- [] BASIC IO AND MONITOR     3/29
+- [] BASIC MOVEMENT SYSTEM    4/2
+- [] ANIMATION                4/5
+- [] CREATING OBJECT          4/20
+- [] CALULATION SYSTEM        4/25
+- [] AUDIO(OPTIONAL)          5/1
