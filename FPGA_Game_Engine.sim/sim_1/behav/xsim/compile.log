@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/background_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module background_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_top
