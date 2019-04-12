@@ -42,11 +42,7 @@ module key_detect(
         end
 
     always@(posedge clk) begin
-        if (flag == 1'b1 && cn == 1'b1) begin
-            start <= 1'b1;
             keycodev <= keycode;
-        end else
-            start <= 1'b0;
     end
 
     //key fsm

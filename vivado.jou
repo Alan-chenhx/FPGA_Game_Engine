@@ -68,3 +68,47 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/impl_1/display_top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+add_files -norecurse -scan_for_includes {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_sprite.v}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+add_files -norecurse -scan_for_includes C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_ghost_rom.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/impl_1/display_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/impl_1/display_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/impl_1/display_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/impl_1/display_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_ghost_rom.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_rom.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_sprite.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_ghost_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_sprite.v}

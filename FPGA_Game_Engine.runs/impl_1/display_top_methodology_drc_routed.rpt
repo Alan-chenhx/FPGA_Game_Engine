@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Apr 12 03:25:55 2019
+| Date         : Fri Apr 12 04:06:51 2019
 | Host         : MINGJIE running 64-bit major release  (build 9200)
 | Command      : report_methodology -file display_top_methodology_drc_routed.rpt -pb display_top_methodology_drc_routed.pb -rpx display_top_methodology_drc_routed.rpx
 | Design       : display_top
@@ -24,15 +24,21 @@ Table of Contents
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 60
-+-----------+----------+-------------------------------+------------+
-| Rule      | Severity | Description                   | Violations |
-+-----------+----------+-------------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell   | 45         |
-| TIMING-18 | Warning  | Missing input or output delay | 15         |
-+-----------+----------+-------------------------------+------------+
++-----------+----------+--------------------------------------------+------------+
+| Rule      | Severity | Description                                | Violations |
++-----------+----------+--------------------------------------------+------------+
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                | 44         |
+| TIMING-18 | Warning  | Missing input or output delay              | 15         |
++-----------+----------+--------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance yoshi_unit/yoshi_rom_unit/color_data[0]_INST_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin uut/cnt_reg[0]/C is not reached by a timing clock
@@ -249,11 +255,6 @@ The clock pin uut/keycode_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Warning
-Non-clocked sequential cell  
-The clock pin uut/oflag_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#45 Warning
 Non-clocked sequential cell  
 The clock pin uut/pflag_reg/C is not reached by a timing clock
 Related violations: <none>
