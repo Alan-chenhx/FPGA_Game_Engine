@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Apr 12 04:06:51 2019
+| Date             : Fri Apr 12 04:33:57 2019
 | Host             : MINGJIE running 64-bit major release  (build 9200)
 | Command          : report_power -file display_top_power_routed.rpt -pb display_top_power_summary_routed.pb -rpx display_top_power_routed.rpx
 | Design           : display_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.135        |
+| Total On-Chip Power (W)  | 0.134        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.061        |
+| Dynamic (W)              | 0.060        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.3         |
@@ -53,17 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |     1094 |       --- |             --- |
-|   LUT as Logic |     0.001 |      601 |     20800 |            2.89 |
-|   CARRY4       |    <0.001 |       74 |      8150 |            0.91 |
-|   Register     |    <0.001 |      260 |     41600 |            0.63 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       23 |       --- |             --- |
-| Signals        |     0.002 |      911 |       --- |             --- |
+| Slice Logic    |     0.001 |      827 |       --- |             --- |
+|   LUT as Logic |     0.001 |      474 |     20800 |            2.28 |
+|   CARRY4       |    <0.001 |       46 |      8150 |            0.56 |
+|   Register     |    <0.001 |      203 |     41600 |            0.49 |
+|   Others       |     0.000 |       25 |       --- |             --- |
+| Signals        |     0.001 |      686 |       --- |             --- |
 | Block RAM      |     0.039 |       49 |        50 |           98.00 |
 | I/O            |     0.015 |       18 |       106 |           16.98 |
 | Static Power   |     0.074 |          |           |                 |
-| Total          |     0.135 |          |           |                 |
+| Total          |     0.134 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.054 |       0.043 |      0.011 |
+| Vccint    |       1.000 |     0.052 |       0.041 |      0.011 |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
 | Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,13 +138,13 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------+-----------+
-| Name               | Power (W) |
-+--------------------+-----------+
-| display_top        |     0.061 |
-|   background_unit  |     0.038 |
-|   yoshi_unit       |     0.007 |
-|     yoshi_rom_unit |     0.002 |
-+--------------------+-----------+
++---------------------+-----------+
+| Name                | Power (W) |
++---------------------+-----------+
+| display_top         |     0.060 |
+|   background_unit   |     0.038 |
+|   object_unit       |     0.005 |
+|     object_rom_unit |     0.002 |
++---------------------+-----------+
 
 

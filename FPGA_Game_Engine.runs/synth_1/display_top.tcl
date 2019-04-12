@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -42,9 +41,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_rom.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_sprite.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/yoshi_ghost_rom.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
