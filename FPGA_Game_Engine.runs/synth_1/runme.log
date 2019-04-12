@@ -1,0 +1,400 @@
+
+*** Running vivado
+    with args -log display_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source display_top.tcl -notrace
+Command: synth_design -top display_top -part xc7a35tcpg236-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off -effort_level quick
+WARNING: [Vivado_Tcl 4-135] The effort_level switch has been deprecated. Please use the -directive switch. Processing will continue in the default mode.
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9332 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 401.059 ; gain = 140.051
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'display_top' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v:1]
+	Parameter H_DISPLAY bound to: 640 - type: integer 
+	Parameter H_L_BORDER bound to: 48 - type: integer 
+	Parameter H_R_BORDER bound to: 16 - type: integer 
+	Parameter H_RETRACE bound to: 96 - type: integer 
+	Parameter H_MAX bound to: 799 - type: integer 
+	Parameter START_H_RETRACE bound to: 656 - type: integer 
+	Parameter END_H_RETRACE bound to: 751 - type: integer 
+	Parameter V_DISPLAY bound to: 480 - type: integer 
+	Parameter V_T_BORDER bound to: 10 - type: integer 
+	Parameter V_B_BORDER bound to: 33 - type: integer 
+	Parameter V_RETRACE bound to: 2 - type: integer 
+	Parameter V_MAX bound to: 524 - type: integer 
+	Parameter START_V_RETRACE bound to: 513 - type: integer 
+	Parameter END_V_RETRACE bound to: 514 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (1#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'test_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/test_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/test_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'test_rom' (2#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/test_rom.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'display_top' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 622.531 ; gain = 361.523
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 622.531 ; gain = 361.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 622.531 ; gain = 361.523
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/display_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 846.023 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 846.031 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 846.031 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 846.031 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 846.031 ; gain = 585.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 846.031 ; gain = 585.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 846.031 ; gain = 585.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:32:36 ; elapsed = 00:32:41 . Memory (MB): peak = 846.031 ; gain = 585.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module display_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module vga_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module test_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_1' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_3' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_5' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_7' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_9' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_11' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_13' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_15' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_17' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_19' (FD) to 'background_unit/i_0/i_23'
+INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_21' (FD) to 'background_unit/i_0/i_23'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:32:37 ; elapsed = 00:32:42 . Memory (MB): peak = 846.031 ; gain = 585.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|test_rom    | color_data | 131072x12     | Block RAM      | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_36 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_38 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_40 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_42 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_44 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_46 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_48 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_50 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_52 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_54 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_56 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_58 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_60 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_62 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_64 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_66 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_68 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_70 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_72 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:32:43 ; elapsed = 00:32:49 . Memory (MB): peak = 864.016 ; gain = 603.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_36 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_38 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_40 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_42 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_44 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_46 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_48 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:32:44 ; elapsed = 00:32:49 . Memory (MB): peak = 873.848 ; gain = 612.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:32:45 ; elapsed = 00:32:50 . Memory (MB): peak = 873.848 ; gain = 612.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:32:45 ; elapsed = 00:32:50 . Memory (MB): peak = 873.848 ; gain = 612.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:32:45 ; elapsed = 00:32:50 . Memory (MB): peak = 873.848 ; gain = 612.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |LUT1        |     3|
+|3     |LUT2        |     3|
+|4     |LUT3        |    17|
+|5     |LUT4        |     6|
+|6     |LUT5        |     9|
+|7     |LUT6        |     9|
+|8     |RAMB36E1    |     1|
+|9     |RAMB36E1_1  |     1|
+|10    |RAMB36E1_10 |     1|
+|11    |RAMB36E1_11 |     1|
+|12    |RAMB36E1_12 |     1|
+|13    |RAMB36E1_13 |     1|
+|14    |RAMB36E1_14 |     1|
+|15    |RAMB36E1_15 |     1|
+|16    |RAMB36E1_16 |     1|
+|17    |RAMB36E1_17 |     1|
+|18    |RAMB36E1_18 |     1|
+|19    |RAMB36E1_19 |     1|
+|20    |RAMB36E1_2  |     1|
+|21    |RAMB36E1_20 |     1|
+|22    |RAMB36E1_21 |     2|
+|23    |RAMB36E1_22 |     1|
+|24    |RAMB36E1_23 |     8|
+|25    |RAMB36E1_24 |     1|
+|26    |RAMB36E1_25 |     1|
+|27    |RAMB36E1_26 |     1|
+|28    |RAMB36E1_27 |     1|
+|29    |RAMB36E1_28 |     1|
+|30    |RAMB36E1_29 |     1|
+|31    |RAMB36E1_3  |     1|
+|32    |RAMB36E1_30 |     1|
+|33    |RAMB36E1_31 |     1|
+|34    |RAMB36E1_32 |     1|
+|35    |RAMB36E1_33 |     1|
+|36    |RAMB36E1_34 |     1|
+|37    |RAMB36E1_35 |     1|
+|38    |RAMB36E1_4  |     5|
+|39    |RAMB36E1_5  |     1|
+|40    |RAMB36E1_6  |     1|
+|41    |RAMB36E1_7  |     1|
+|42    |RAMB36E1_8  |     1|
+|43    |RAMB36E1_9  |     1|
+|44    |FDCE        |    24|
+|45    |FDRE        |    13|
+|46    |IBUF        |     2|
+|47    |OBUF        |    14|
++------+------------+------+
+
+Report Instance Areas: 
++------+------------------+---------+------+
+|      |Instance          |Module   |Cells |
++------+------------------+---------+------+
+|1     |top               |         |   149|
+|2     |  vsync_unit      |vga_sync |    57|
+|3     |  background_unit |test_rom |    62|
++------+------------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:32:45 ; elapsed = 00:32:50 . Memory (MB): peak = 873.848 ; gain = 612.840
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:32:08 ; elapsed = 00:32:44 . Memory (MB): peak = 873.848 ; gain = 389.340
+Synthesis Optimization Complete : Time (s): cpu = 00:32:45 ; elapsed = 00:32:50 . Memory (MB): peak = 873.848 ; gain = 612.840
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 873.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:32:47 ; elapsed = 00:32:53 . Memory (MB): peak = 873.848 ; gain = 625.727
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 873.848 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/synth_1/display_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file display_top_utilization_synth.rpt -pb display_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 12 01:46:43 2019...

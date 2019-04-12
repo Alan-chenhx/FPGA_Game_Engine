@@ -10,7 +10,9 @@ module display_top
 	wire [9:0] x, y;                                              // location of VGA pixel
 	wire video_on, pixel_tick;                                    // route VGA signals
 	reg [11:0] rgb_reg, rgb_next;                                 // RGB data register to route out to VGA DAC
-	wire [11:0] bg_rgb;
+	wire [11:0] bg_rgb, object_rgb;
+	wire [9:0] o_x, o_y;
+	wire object_on;
 	
 	// *** instantiate sub modules ***
 	
@@ -21,13 +23,22 @@ module display_top
 	// instantiate background rom circuit
 	test_rom background_unit (.clk(clk), .row(y[7:0]), .col(x[7:0]), .color_data(bg_rgb));
 
+	// object test
+	object_test object_unit (.clk(clk), .reset(reset), .btnU(up),
+				 .btnL(left), .btnR(right), .btnD(down), .video_on(video_on), .x(x), .y(y),
+				 .grounded(0), .game_over_object(0), .collision(0),
+				 .rgb_out(object_rgb), .object_on(object_on), .o_x(o_x), .o_y(o_y),
+				 .direction(direction));
+
 
 	//  *** RGB multiplexing circuit ***
 	// routes correct RGB data depending on video_on, < >_on signals, and game_state signal
     always @*
 		begin
         	if (~video_on)
-			rgb_next = 12'b0; // black
+				rgb_next = 12'b0; // black
+			else if (object_on)
+				rgb_next = object_rgb;
             else
                 rgb_next = bg_rgb;			
 		end
