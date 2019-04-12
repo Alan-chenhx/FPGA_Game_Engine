@@ -10,13 +10,13 @@ module key_detect(
     input clk, 
     input reset,
     input PS2Clk,
-    input data );
+    input PS2ata );
 
     reg  start;
-    wire [15:0] keycode;
-    wire [15:0] keycodev;
-    wire flag;
-    
+    reg [15:0] keycode;
+    reg  [15:0] keycodev;
+    reg flag;
+    reg cn;
     PS2Receiver uut (
         .clk(clk),
         .kclk(PS2Clk),
@@ -24,13 +24,12 @@ module key_detect(
         .keycode(keycode),
         .oflag(flag)
     );
-
+    
     always@(keycode)
         if (keycode[7:0] == 8'hf0) begin
             cn <= 1'b0;
         end else begin
             cn <= keycode[7:0] != keycodev[7:0] || keycodev[15:8] == 8'hf0;
-            bcount <= 3'd2;
         end
 
     always@(posedge clk) begin
@@ -41,8 +40,8 @@ module key_detect(
            start <= 1'b0;
     end
     
-    key_fsm #(key_up) up_fsm(.key_pressed(up), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(key_down) up_fsm(.key_pressed(down), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(key_right) up_fsm(.key_pressed(right), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(key_left) up_fsm(.key_pressed(left), .keycode(keycodev), .clk(clk), .reset(reset));
+    key_fsm #(`key_up) up_fsm(.key_pressed(up), .keycode(keycodev), .clk(clk), .reset(reset));
+    key_fsm #(`key_down) down_fsm(.key_pressed(down), .keycode(keycodev), .clk(clk), .reset(reset));
+    key_fsm #(`key_right) right_fsm(.key_pressed(right), .keycode(keycodev), .clk(clk), .reset(reset));
+    key_fsm #(`key_left) left_fsm(.key_pressed(left), .keycode(keycodev), .clk(clk), .reset(reset));
 endmodule 
