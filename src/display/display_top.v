@@ -1,6 +1,7 @@
 module display_top
 	(
 		input wire clk, hard_reset,  // clock signal, reset signal from switch
+		input wire PSData, PS2Clk,	// PS/2 signal
 		output wire hsync, vsync,    // outputs VGA signals to VGA port
 		output wire [11:0] rgb      // output rgb signals to VGA DAC
 	);
@@ -29,6 +30,9 @@ module display_top
 				 .grounded(0), .game_over_object(0), .collision(0),
 				 .rgb_out(object_rgb), .object_on(object_on), .o_x(o_x), .o_y(o_y),
 				 .direction(direction));
+
+	key_detect keyboard_unit(.up(up), .down(down), .right(right), .left(left), 
+				 .clk(clk), .reset(hard_reset), .PS2Clk(PS2Clk), .PS2Data(PS2Data));
 
 
 	//  *** RGB multiplexing circuit ***
