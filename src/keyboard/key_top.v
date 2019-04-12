@@ -13,7 +13,7 @@ module key_detect(
     input PS2ata );
 
     reg  start;
-    reg [15:0] keycode;
+    wire [15:0] keycode;
     reg  [15:0] keycodev;
     reg flag;
     reg cn;
