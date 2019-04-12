@@ -74,10 +74,10 @@ module object_test
         if(btnR && !btnL)     // if right button pressed, change value to RIGHT
             dir_next = RIGHT;
                 
-        if(btnU && !btnD)     // if left button pressed, change value to UP
+        if(btnU && !btnD)     // if uo button pressed, change value to UP
             dir_next = UP;  
            
-        if(btnD && !btnU)     // if right button pressed, change value to DOWN
+        if(btnD && !btnU)     // if left button pressed, change value to DOWN
             dir_next = DOWN;
         end
    
@@ -381,7 +381,7 @@ module object_test
     object_rom object_rom_unit (.clk(clk), .row(row), .col(col), .color_data(color_data_object));
 	
     // vector to signal when vga_sync pixel is within object tile
-    wire object_on = (dir_reg == RIGHT || LEFT || UP || DOWN) 
+    wire object_on = (dir_reg == RIGHT || dir_reg == LEFT || dir_reg == UP || dir_reg == DOWN) 
                     && (x >= s_x_reg) && (x <= s_x_reg + T_W - 1) && (y >= s_y_reg) && (y <= s_y_reg + T_H - 1) ? 1 : 0;
    
    
