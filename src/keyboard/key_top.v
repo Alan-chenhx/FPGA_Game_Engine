@@ -10,12 +10,12 @@ module key_detect(
     input clk, 
     input reset,
     input PS2Clk,
-    input PS2ata );
+    input data );
 
     reg  start;
     wire [15:0] keycode;
     reg  [15:0] keycodev;
-    reg flag;
+    wire flag;
     reg cn;
     PS2Receiver uut (
         .clk(clk),
