@@ -50,7 +50,6 @@ module key_detect(
     end
 
     //key fsm
-    //wire w_pressed, s_pressed, up_pressed, down_pressed;
     key_fsm #(`key_up) up_fsm(.key_pressed(up), .keycode(keycodev), .clk(clk), .reset(reset));
     key_fsm #(`key_down) down_fsm(.key_pressed(down), .keycode(keycodev), .clk(clk), .reset(reset));
     key_fsm #(`key_left) left_fsm(.key_pressed(left), .keycode(keycodev), .clk(clk), .reset(reset));
