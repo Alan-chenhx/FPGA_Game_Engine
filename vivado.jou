@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Apr 12 02:45:42 2019
+# Process ID: 10252
+# Current directory: C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20612 C:\Users\jimi1\Documents\GitHub\FPGA_Game_Engine\FPGA_Game_Engine.xpr
+# Log file: C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/vivado.log
+# Journal file: C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine\vivado.jou
+#----------------------------------------------------------ststart_guopopen_project C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.xpupupdate_compile_order -fileset sources_export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/background_rom.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/binary2bcd.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/test_rom.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/background_update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ers/jimi1/Documents/GitHub/FPGA_Game_Engine/src/binary2bcd.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/test_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v}
+set_property source_mgmt_mode DisplayOnly [current_project]
+add_files -scan_for_includes {C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/binary2bcd.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

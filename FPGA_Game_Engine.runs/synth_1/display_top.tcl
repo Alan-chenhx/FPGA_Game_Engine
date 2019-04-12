@@ -29,9 +29,18 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/test_rom.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/binary2bcd.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object_rom.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

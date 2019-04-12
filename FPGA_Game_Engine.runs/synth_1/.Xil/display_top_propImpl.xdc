@@ -31,3 +31,7 @@ set_property src_info {type:XDC file:1 line:262 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN R19 [get_ports vsync]
 set_property src_info {type:XDC file:1 line:265 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R2 [get_ports hard_reset]
+set_property src_info {type:XDC file:1 line:277 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN C17 [get_ports PS2Clk]
+set_property src_info {type:XDC file:1 line:280 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B17 [get_ports PS2Data]

@@ -1,14 +1,14 @@
 module object_test
     (
         input wire clk, reset,       // clock/reset inputs for synchronous registers 
-        input wire btnU, btnL, btnR, btnD // inputs used to move object across screen
+        input wire btnU, btnL, btnR, btnD, // inputs used to move object across screen
         input wire video_on,         // input from vga_sync signaling when video signal is on
         input wire [9:0] x, y,       // current pixel coordinates from vga_sync circuit
         input wire grounded,         // input signal conveying when Yoshi is grounded on a platform
 	    input wire game_over_object,  // input signal conveying when game state is gameover
 	    input wire collision,        // input signal conveying when object collides with ghost
         output reg [11:0] rgb_out,   // output rgb signal for current object pixel
-        output reg object_on,         // output signal asserted when input x/y are within object object in display area
+        output reg object_out_on,         // output signal asserted when input x/y are within object object in display area
         output wire [9:0] o_x, o_y,  // output signals for object object's current location within display area
 	    output wire direction        // output signal conveying object's direction of motion
     );
@@ -394,7 +394,7 @@ module object_test
     always @*
 		begin
 		// defaults
-		object_on = 0;
+		object_out_on = 0;
 		rgb_out = 0;
 		
 		if(object_on && video_on)               // if x/y in object region  
@@ -402,7 +402,7 @@ module object_test
 			rgb_out = color_data_object;               // else output rgb data for object
 		
 			if(rgb_out != 12'b011011011110)               // if rgb data isn't object background color
-					object_on = 1;                         // assert object_on signal to let display_top draw current pixel   
+					object_out_on = 1;                         // assert object_on signal to let display_top draw current pixel   
 			end
         end
 endmodule
