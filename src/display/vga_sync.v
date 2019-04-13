@@ -20,7 +20,7 @@ module vga_sync
 	localparam V_B_BORDER      =  33; // vertical bottom border
 	localparam V_RETRACE       =   2; // vertical retrace
 	localparam V_MAX           = V_DISPLAY + V_T_BORDER + V_B_BORDER + V_RETRACE - 1;
-    localparam START_V_RETRACE = V_DISPLAY + V_B_BORDER;
+	localparam START_V_RETRACE = V_DISPLAY + V_B_BORDER;
 	localparam END_V_RETRACE   = V_DISPLAY + V_B_BORDER + V_RETRACE - 1;
 	
 	// mod-2 counter to generate 25 MHz pixel tick
