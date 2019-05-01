@@ -1,8 +1,21 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../src/background_rom.v" \
-"../../../../src/vga_sync.v" \
-"../../../../src/display_top.v" \
+"../../../../src/keyboard/debouncer.v" \
+"../../../../src/keyboard/key_fsm.v" \
+"../../../../src/keyboard/PS2Receiver.v" \
+"../../../../src/keyboard/key_top.v" \
+"../../../../src/display/display_top.v" \
+"../../../../src/display/vga_sync.v" \
+"../../../../src/roms/test_rom.v" \
+"../../../../src/roms/object1_rom.v" \
+"../../../../src/roms/background_rom.v" \
+"../../../../src/basic_modules/basic_modules.v" \
+"../../../../src/object/ROMreader.v" \
+"../../../../src/roms/object2_rom.v" \
+"../../../../src/roms/object4_rom.v" \
+"../../../../src/roms/object3_rom.v" \
+"../../../../src/object/object_engine.v" \
+"../../../../src/game/game_state_machine.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

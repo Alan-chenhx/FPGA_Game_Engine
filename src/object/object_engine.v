@@ -35,7 +35,7 @@ module object_engine
 
     // starting position
     parameter START_X = 320;
-    parameter START_Y = 320;
+    parameter START_Y = 240;
 
     // output width and height
     always @(*)
@@ -47,7 +47,7 @@ module object_engine
     /***********************************************************************************/
     /*                           object location registers                             */  
     /***********************************************************************************/
-    // object object location regs, pixel location with respect to top left corner
+    // object location regs, pixel location with respect to top left corner
     reg [9:0] s_x_reg, s_y_reg;
     reg [9:0] s_x_next, s_y_next;
    
@@ -81,7 +81,7 @@ module object_engine
     always @(posedge clk, posedge reset)
         if (reset)
         begin
-            x_dir_reg     <= RIGHT;
+            x_dir_reg     <= LEFT;
             y_dir_reg     <= UP;
         end
         else
@@ -191,7 +191,7 @@ module object_engine
                    
                 else if(x_time_reg == 0)                                        // if x_time reg = 0
                     begin 
-                    if(s_x_reg > MIN_X)                                           // is object can move left,
+                    if(s_x_reg > MIN_X || no_boundary)                                           // is object can move left,
                         s_x_next = s_x_reg - 1;                                 // move left
                     
 		            if(btnL && x_start_reg > TIME_MIN_X)                    	// if left button pressed and x_start_reg > min,

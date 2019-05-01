@@ -6,6 +6,7 @@ module display_top
 	(
 		input wire clk, hard_reset,  // clock signal, reset signal from switch
 		input wire PS2Data, PS2Clk,	// PS/2 signal
+		input wire [3:0] sw,          //switch
 		output wire hsync, vsync,    // outputs VGA signals to VGA port
 		output wire [11:0] rgb      // output rgb signals to VGA DAC
 	);
@@ -16,7 +17,7 @@ module display_top
 	wire [2:0] game_state;                                        // route current game state from game_state_machine
 	wire game_en;                                                 // route signal conveying if game is enabled (playing mode)
 	wire game_reset;                                              // route signal to trigger reset in other modules from inside game_state_machine
-    wire reset = hard_reset || game_reset;;                       // reset signal
+    wire reset = hard_reset || game_reset;                        // reset signal
 	wire [9:0] x, y;                                              // location of VGA pixel
 	wire video_on, pixel_tick;                                    // route VGA signals
 	reg [11:0] rgb_reg, rgb_next;                                 // RGB data register to route out to VGA DAC
@@ -37,7 +38,7 @@ module display_top
 	wire [31:0] keys;											  // keyboard keys
 	wire [5:0] collisions;										  // route signal to detect collisions between objects
 	wire gameover_on;											  // route signal conveying if game is over.
-	assign up = keys[0] && game_en;								  // up control for birds
+	wire up = keys[0] && game_en;								  // up control for birds
 	
 	// *** instantiate sub modules ***
 	
@@ -46,24 +47,26 @@ module display_top
                              .video_on(video_on), .p_tick(pixel_tick), .x(x), .y(y));
 	
 	// instantiate background rom circuit
-	background_rom background_unit (.clk(clk), .row(y[9:0]), .col(x[9:0]), .color_data(bg_rgb));
+	// background_rom background_unit (.clk(clk), .row(y[9:0]), .col(x[9:0]), .color_data(bg_rgb));
 	
-	// ROMreader
-	ROMreader objects_rom (.clk(clk), .row(row), .col(col), .color_data1(color_data_object), .color_data2(color_data_pipes));
+	// transfer
+	wire [9:0] t_x, t_y;
+	transfer #(320) tf (.clk(clk), .sw(sw), .w(32), .x_out(t_x), .y_out(t_y));
 
 	// bird
-	object_engine #(.T_W(32), .T_H(32),.START_X(150),.START_Y(240)) bird_unit (.clk(clk), .reset(hard_reset), 
-				 .btnU(up), .video_on(video_on), .x(x), .y(y),
+	object1_rom object_rom_unit1 (.clk(clk), .row(object_row), .col(object_col), .color_data(color_data_object));
+	object_engine #(.T_W(32), .T_H(23)) bird_unit (.clk(clk), .reset(hard_reset), 
+				 .btnU(keys[0]), .video_on(video_on), .x(x), .y(y),
 				 .grounded(0), .gravity(1), .jump_in_air(1), .collision(0),
 				 .rgb_out(object_rgb), .object_out_on(object_on), .o_x(bird_x), .o_y(bird_y),.object_enable(1),
-				 .row(object_row), .col(object_col), .color_data(color_data_object1));
-
+				 .row(object_row), .col(object_col), .color_data(color_data_object));
 	// pipes
-	object_engine #(.T_W(96), .T_H(480),.START_X(650),.START_Y(480)) pipe1_unit (.clk(clk), .reset(hard_reset), 
-				 .btnL(1), .video_on(video_on), .x(x), .y(y), .grounded(1), .no_boundary(1),
-				 .trans_x_on(1), trans_y_on(1), .t_x(), .t_y(),
-				 .rgb_out(pipe_rgb1), .object_out_on(pipes_on[1]), .o_x(pipe1_x), .o_y(pipe1_y),.object_enable(1),
-				 .row(row), .col(col), .color_data(color_data_pipes));
+//	object2_rom object_rom_unit2 (.clk(clk), .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipes));
+//	object_engine #(.T_W(96), .T_H(480),.START_X(240),.START_Y(200)) pipe1_unit (.clk(clk), .reset(hard_reset), 
+//				 .btnL(1), .video_on(video_on), .x(x), .y(y),
+//				 .no_boundary(1), .collision(0),
+//				 .rgb_out(pipe_rgb1), .object_out_on(pipes_on[1]), .o_x(pipe1_x), .o_y(pipe1_y),.object_enable(1),
+//				 .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipes));
 	
 	/* Start Keyboard control logic */
     key_detect key_detecter (.out(keys), .clk(clk), .PS2Clk(PS2Clk), .PS2Data(PS2Data));
@@ -73,8 +76,8 @@ module display_top
 				     			 .game_state(game_state), .game_en(game_en), .game_reset(game_reset));
 	
 	// instantiate gameover display circuit
-	gameover_display gameover_display_unit (.clk(clk), .x(x), .y(y), .rgb_out(gameover_rgb),
-	                                        .gameover_on(gameover_on));
+//	gameover_display gameover_display_unit (.clk(clk), .x(x), .y(y), .rgb_out(gameover_rgb),
+//	                                        .gameover_on(gameover_on));
 
 	//  *** RGB multiplexing circuit ***
 	// routes correct RGB data depending on video_on, < >_on signals, and game_state signal
@@ -84,12 +87,15 @@ module display_top
 				rgb_next = 12'b0; // black
 			// else if(game_logo_on && game_state == idle)
 			// 	rgb_next = game_logo_rgb;
-			else if(gameover_on && game_state == gameover)
-				rgb_next = gameover_rgb;
+//			else if(gameover_on && game_state == gameover)
+//				rgb_next = gameover_rgb;
 			else if (object_on)
 				rgb_next = object_rgb;
+			else if (pipes_on[1])
+				rgb_next = pipe_rgb1;
             else
-                rgb_next = bg_rgb;			
+                // rgb_next = bg_rgb;	
+				rgb_next = 12'b1;		
 		end
 	
 	// rgb buffer register

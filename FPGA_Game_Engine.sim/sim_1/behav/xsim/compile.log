@@ -1,6 +1,61 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/background_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module background_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/vga_sync.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module vga_sync
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display_top.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PS2Receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_detect
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module display_top
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:19]
+INFO: [VRFC 10-2458] undeclared symbol row, assumed default net type wire [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:52]
+INFO: [VRFC 10-2458] undeclared symbol col, assumed default net type wire [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:52]
+INFO: [VRFC 10-2458] undeclared symbol start, assumed default net type wire [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
+INFO: [VRFC 10-2458] undeclared symbol collision, assumed default net type wire [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module object1_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module background_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffe
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-311] analyzing module mux2v
+INFO: [VRFC 10-311] analyzing module mux3v
+INFO: [VRFC 10-311] analyzing module mux4v
+INFO: [VRFC 10-311] analyzing module mux16v
+INFO: [VRFC 10-311] analyzing module mux32v
+INFO: [VRFC 10-311] analyzing module halfadder
+INFO: [VRFC 10-311] analyzing module fulladder
+INFO: [VRFC 10-311] analyzing module DecimalDigitDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROMreader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module object2_rom
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:29]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:31]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:32]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:33]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module object4_rom
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:29]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:31]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:32]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:33]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module object3_rom
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:29]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:31]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:32]
+WARNING: [VRFC 10-986] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:33]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module object_engine
+WARNING: [VRFC 10-3380] identifier 'y_state_reg' is used before its declaration [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:105]
+WARNING: [VRFC 10-3380] identifier 'y_state_reg' is used before its declaration [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:108]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/game/game_state_machine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_state_machine
