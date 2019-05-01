@@ -30,8 +30,8 @@ module random_height(
             if(x>642)
             begin
                 out=rand[9:0];
-                out=out%100;
-                out=out+(out%2+1)*100;
+                out=out%400+40;
+                // out=out+(out%2+1)*100;
                 y_next = out; 
             end
             else
