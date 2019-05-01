@@ -1,4 +1,4 @@
-module object2_rom
+module tube2_rom
 	(
 		input wire clk,
 		input wire [7:0] row,

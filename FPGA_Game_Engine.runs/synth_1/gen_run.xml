@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556742041">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556743074">
   <File Type="PA-TCL" Name="display_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="display_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="display_top_reports.tcl"/>
@@ -191,10 +191,10 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Flow_RuntimeOptimized" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design">
-      <Option Id="FlattenHierarchy">1</Option>
-      <Option Id="Directive">0</Option>
-      <Option Id="MoreOptsStr"><![CDATA[-effort_level quick]]></Option>
       <Option Id="FsmExtraction">0</Option>
+      <Option Id="FlattenHierarchy">1</Option>
+      <Option Id="MoreOptsStr"><![CDATA[-effort_level quick]]></Option>
+      <Option Id="Directive">0</Option>
     </Step>
   </Strategy>
 </GenRun>

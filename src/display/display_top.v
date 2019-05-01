@@ -68,11 +68,11 @@ module display_top
 				 .rgb_out(object_rgb), .object_out_on(object_on), .o_x(bird_x), .o_y(bird_y),.object_enable(1),
 				 .row(object_row), .col(object_col), .color_data(color_data_object));
 	// pipes
-//	object2_rom pipe_rom_unit1 (.clk(clk), .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipe1));
-//	object_engine #(.T_W(52), .T_H(640)) pipe1_unit (.clk(clk), .reset(reset), 
-//				 .video_on(video_on), .x(x), .y(y), .no_boundary(1),
-//				 .rgb_out(pipe_rgb1), .object_out_on(pipes_on[1]), .o_x(pipe1_x), .o_y(pipe1_y),.object_enable(1),
-//				 .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipe1));
+	object2_rom pipe_rom_unit1 (.clk(clk), .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipe1));
+	object_engine #(.T_W(52), .T_H(640)) pipe1_unit (.clk(clk), .reset(reset), 
+				 .video_on(video_on), .x(x), .y(y), .no_boundary(1),
+				 .rgb_out(pipe_rgb1), .object_out_on(pipes_on[1]), .o_x(pipe1_x), .o_y(pipe1_y),.object_enable(1),
+				 .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipe1));
 	// object2_rom pipe_rom_unit2 (.clk(clk), .row(pipe2_row), .col(pipe2_col), .color_data(color_data_pipe2));
 	// object_engine #(.T_W(52), .T_H(640)) pipe2_unit (.clk(clk), .reset(reset), 
 	// 			 .video_on(video_on), .x(x), .y(y), .no_boundary(1),
