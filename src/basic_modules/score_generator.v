@@ -1,12 +1,12 @@
 module score_generator(
     input clk,
-    output [13:0] score
+    output reg [13:0] score
 );
   reg [31:0] counter=1;
     reg temp_clk = 0 ;
     always @ (posedge ( clk ) )
         begin
-        if (counter== 10000000000 )
+        if (counter== 50000000 )
             begin
                 counter <= 1 ;
                 temp_clk <= ~temp_clk ;
