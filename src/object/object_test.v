@@ -5,12 +5,12 @@ module object_test
         input wire video_on,         // input from vga_sync signaling when video signal is on
         input wire [9:0] x, y,       // current pixel coordinates from vga_sync circuit
         input wire grounded,         // input signal conveying when Yoshi is grounded on a platform
-	    input wire game_over_object,  // input signal conveying when game state is gameover
 	    input wire collision,        // input signal conveying when object collides with ghost
         output reg [11:0] rgb_out,   // output rgb signal for current object pixel
         output reg object_out_on,         // output signal asserted when input x/y are within object object in display area
-        output wire [9:0] o_x, o_y,  // output signals for object object's current location within display area
-	    output wire direction        // output signal conveying object's direction of motion
+        output wire [9:0] o_x, o_y,  // output signals for object's current location within display area
+	    output wire direction,        // output signal conveying object's direction of motion
+        output wire [9:0] o_w, o_h   // output signals for object's width and height
     );
    
     // constant declarations
@@ -22,6 +22,10 @@ module object_test
     // tile width and height
     localparam T_W = 16;
     localparam T_H = 16;
+
+    // output width and height
+    o_w = T_W;
+    o_h = T_H;
    
     /***********************************************************************************/
     /*                           object location registers                             */  
