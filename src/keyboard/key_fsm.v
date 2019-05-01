@@ -1,4 +1,4 @@
-module key_fsm(output  key_pressed,  input [15:0] keycode, input clk, input reset);
+module key_fsm(output  key_pressed,  input [15:0] keycode, input clk);
     parameter
         desired_key_id = 8'h1d;
     reg temp_pressed;

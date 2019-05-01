@@ -76,38 +76,38 @@ module key_detect(
     end
 
     //key fsm
-    key_fsm #(`key_up) up_fsm (.key_pressed(out[0]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_left) left_fsm (.key_pressed(out[1]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_down) down_fsm (.key_pressed(out[2]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_right) right_fsm (.key_pressed(out[3]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_space) space_fsm (.key_pressed(out[4]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_tab) tab_fsm (.key_pressed(out[5]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_q) q_fsm (.key_pressed(out[6]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_w) w_fsm (.key_pressed(out[7]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_e) e_fsm (.key_pressed(out[8]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_r) r_fsm (.key_pressed(out[9]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_t) t_fsm (.key_pressed(out[10]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_y) y_fsm (.key_pressed(out[11]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_u) u_fsm (.key_pressed(out[12]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_i) i_fsm (.key_pressed(out[13]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_o) o_fsm (.key_pressed(out[14]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_p) p_fsm (.key_pressed(out[15]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_a) a_fsm (.key_pressed(out[16]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_s) s_fsm (.key_pressed(out[17]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_d) d_fsm (.key_pressed(out[18]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_f) f_fsm (.key_pressed(out[19]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_g) g_fsm (.key_pressed(out[20]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_h) h_fsm (.key_pressed(out[21]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_j) j_fsm (.key_pressed(out[22]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_k) k_fsm (.key_pressed(out[23]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_l) l_fsm (.key_pressed(out[24]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_z) z_fsm (.key_pressed(out[25]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_x) x_fsm (.key_pressed(out[26]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_c) c_fsm (.key_pressed(out[27]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_v) v_fsm (.key_pressed(out[28]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_b) b_fsm (.key_pressed(out[29]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_n) n_fsm (.key_pressed(out[30]), .keycode(keycodev), .clk(clk), .reset(reset));
-    key_fsm #(`key_m) m_fsm (.key_pressed(out[31]), .keycode(keycodev), .clk(clk), .reset(reset));
+    key_fsm #(`key_up) up_fsm (.key_pressed(out[0]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_left) left_fsm (.key_pressed(out[1]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_down) down_fsm (.key_pressed(out[2]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_right) right_fsm (.key_pressed(out[3]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_space) space_fsm (.key_pressed(out[4]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_tab) tab_fsm (.key_pressed(out[5]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_q) q_fsm (.key_pressed(out[6]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_w) w_fsm (.key_pressed(out[7]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_e) e_fsm (.key_pressed(out[8]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_r) r_fsm (.key_pressed(out[9]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_t) t_fsm (.key_pressed(out[10]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_y) y_fsm (.key_pressed(out[11]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_u) u_fsm (.key_pressed(out[12]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_i) i_fsm (.key_pressed(out[13]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_o) o_fsm (.key_pressed(out[14]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_p) p_fsm (.key_pressed(out[15]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_a) a_fsm (.key_pressed(out[16]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_s) s_fsm (.key_pressed(out[17]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_d) d_fsm (.key_pressed(out[18]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_f) f_fsm (.key_pressed(out[19]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_g) g_fsm (.key_pressed(out[20]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_h) h_fsm (.key_pressed(out[21]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_j) j_fsm (.key_pressed(out[22]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_k) k_fsm (.key_pressed(out[23]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_l) l_fsm (.key_pressed(out[24]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_z) z_fsm (.key_pressed(out[25]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_x) x_fsm (.key_pressed(out[26]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_c) c_fsm (.key_pressed(out[27]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_v) v_fsm (.key_pressed(out[28]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_b) b_fsm (.key_pressed(out[29]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_n) n_fsm (.key_pressed(out[30]), .keycode(keycodev), .clk(clk));
+    key_fsm #(`key_m) m_fsm (.key_pressed(out[31]), .keycode(keycodev), .clk(clk));
 
 
  
