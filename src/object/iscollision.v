@@ -7,28 +7,18 @@ module is_collide
 		input wire [9:0]s_h, s_w,      // second_object height/width
 		output wire collision           // is the two object cl
     );
-	reg collide;
+	reg collide=0;
 
     localparam LEFT = 0;
     localparam RIGHT = 1;
 	
     always @* 
-        begin
-            collide=0;
-           // if(direction==LEFT)
-                begin
-                    if((f_x+f_w)>=(s_x)&&(f_x)<=(s_x+s_w)&&(f_y)>=(s_y-s_h)&&(f_y-f_h)<=(s_y))
-                        collide = 1;
-                    else if((f_x)<=(s_x)&&(f_x+f_w)>=(s_x+s_w)&&(f_y)>(s_y-s_h)&&(f_y-f_h)<(s_y))
-                        collide = 1;
-                    else if((f_x)>(s_x-s_w)&&(f_x-f_w)<(s_x)&&(f_y)<=(s_y)&&(f_y-f_h)>=(s_y-s_h))
-                        collide = 1;
-                    else if((f_x)<=(s_x)&&(f_x-f_w)>=(s_x-s_w)&&(f_y)<=(s_y)&&(f_y-f_h)>=(s_y-s_h))
-                        collide = 1;
-                    else 
-                        collide = 0;
-                end
-            
+        begin                
+            if((((f_x+f_w)>=(s_x)&&(f_x+f_w)<=(s_x+s_w))||((f_x)>=(s_x)&&(f_x)<=(s_x+s_w)))
+                &&((f_y)>=(s_y)&&(f_y)<=(s_y+s_h)||(f_y+f_h)>=(s_y)&&(f_y+f_h)<=(s_y+s_h)))
+                    collide = 1;
+            else 
+                    collide = 0;            
         end
 
     assign collision=collide;

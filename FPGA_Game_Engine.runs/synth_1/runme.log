@@ -15,17 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4804 
+INFO: Helper process launched with PID 6940 
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:29]
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:31]
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:32]
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:33]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:29]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:31]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:32]
-WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:33]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 450.566 ; gain = 189.512
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 440.160 ; gain = 178.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'display_top' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
 	Parameter idle bound to: 3'b001 
@@ -87,6 +83,7 @@ WARNING: [Synth 8-350] instance 'bird_unit' of module 'object_engine' requires 2
 INFO: [Synth 8-6157] synthesizing module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
 INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'object2_rom' (4#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (8) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:71]
 WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (6) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:71]
 INFO: [Synth 8-6157] synthesizing module 'object_engine__parameterized0' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
 	Parameter MIN_X bound to: 0 - type: integer 
@@ -134,7 +131,7 @@ INFO: [Synth 8-6155] done synthesizing module 'DecimalDigitDecoder' (7#1) [C:/Us
 INFO: [Synth 8-6155] done synthesizing module 'seg_display' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/seven_seg_display.v:1]
 WARNING: [Synth 8-3848] Net reset in module/entity score_display does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'score_display' (9#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:1]
-WARNING: [Synth 8-689] width (10) of port connection 'num2' does not match port width (7) of module 'score_display' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:101]
+WARNING: [Synth 8-689] width (10) of port connection 'num2' does not match port width (7) of module 'score_display' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:116]
 INFO: [Synth 8-6157] synthesizing module 'key_detect' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:34]
 INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
@@ -278,7 +275,7 @@ WARNING: [Synth 8-3331] design display_top has unconnected port sw[2]
 WARNING: [Synth 8-3331] design display_top has unconnected port sw[1]
 WARNING: [Synth 8-3331] design display_top has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 579.305 ; gain = 318.250
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 526.492 ; gain = 265.234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -344,10 +341,10 @@ WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:trans_y_on to constant 0 [
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 579.305 ; gain = 318.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 526.492 ; gain = 265.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 579.305 ; gain = 318.250
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 526.492 ; gain = 265.234
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -358,30 +355,30 @@ Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/B
 Finished Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/display_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 821.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 789.559 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 821.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.609 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 821.324 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 821.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.609 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 789.609 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 821.324 ; gain = 560.270
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 789.609 ; gain = 528.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 821.324 ; gain = 560.270
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 789.609 ; gain = 528.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 821.324 ; gain = 560.270
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 789.609 ; gain = 528.352
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
@@ -436,7 +433,7 @@ INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:07 ; elapsed = 00:04:09 . Memory (MB): peak = 821.324 ; gain = 560.270
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 789.609 ; gain = 528.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -454,8 +451,8 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit       Adders := 14    
 	   2 Input     14 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 8     
-	   2 Input     10 Bit       Adders := 14    
-	   3 Input     10 Bit       Adders := 18    
+	   2 Input     10 Bit       Adders := 20    
+	   3 Input     10 Bit       Adders := 6     
 	   2 Input      5 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 45    
 	   2 Input      3 Bit       Adders := 1     
@@ -464,7 +461,8 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	               26 Bit    Registers := 2     
 	               20 Bit    Registers := 10    
-	               16 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 6     
@@ -499,7 +497,7 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 168   
+	   2 Input      1 Bit        Muxes := 159   
 	   4 Input      1 Bit        Muxes := 8     
 	   7 Input      1 Bit        Muxes := 2     
 	  12 Input      1 Bit        Muxes := 2     
@@ -567,7 +565,7 @@ Detailed RTL Component Info :
 Module object2_rom 
 Detailed RTL Component Info : 
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
 +---ROMs : 
 	                              ROMs := 1     
 Module object_engine__parameterized0 
@@ -605,10 +603,7 @@ Detailed RTL Component Info :
 Module is_collide 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     10 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input     10 Bit       Adders := 4     
 Module score_generator 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -945,21 +940,15 @@ INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[17]' (FDCE) to 
 INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_state_reg_reg[2]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\y_state_reg_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:16 ; elapsed = 00:04:18 . Memory (MB): peak = 821.324 ; gain = 560.270
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 789.609 ; gain = 528.352
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6837] The timing for the instance object_rom_unit1/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -970,7 +959,7 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:23 ; elapsed = 00:04:25 . Memory (MB): peak = 821.324 ; gain = 560.270
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 789.609 ; gain = 528.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -982,20 +971,14 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6837] The timing for the instance object_rom_unit1/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:24 ; elapsed = 00:04:26 . Memory (MB): peak = 837.598 ; gain = 576.543
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 807.742 ; gain = 546.484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1013,7 +996,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:26 ; elapsed = 00:04:28 . Memory (MB): peak = 837.598 ; gain = 576.543
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1026,7 +1009,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:26 ; elapsed = 00:04:28 . Memory (MB): peak = 837.598 ; gain = 576.543
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1038,7 +1021,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:26 ; elapsed = 00:04:28 . Memory (MB): peak = 837.598 ; gain = 576.543
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1051,64 +1034,46 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------------+------+
-|      |Cell        |Count |
-+------+------------+------+
-|1     |BUFG        |     1|
-|2     |CARRY4      |   176|
-|3     |LUT1        |   185|
-|4     |LUT2        |   371|
-|5     |LUT3        |    56|
-|6     |LUT4        |   121|
-|7     |LUT5        |   180|
-|8     |LUT6        |   306|
-|9     |MUXF7       |     7|
-|10    |RAMB36E1    |     1|
-|11    |RAMB36E1_1  |     1|
-|12    |RAMB36E1_10 |     1|
-|13    |RAMB36E1_11 |     1|
-|14    |RAMB36E1_12 |     1|
-|15    |RAMB36E1_13 |     1|
-|16    |RAMB36E1_14 |     1|
-|17    |RAMB36E1_15 |     1|
-|18    |RAMB36E1_16 |     1|
-|19    |RAMB36E1_17 |     1|
-|20    |RAMB36E1_18 |     1|
-|21    |RAMB36E1_19 |     1|
-|22    |RAMB36E1_2  |     1|
-|23    |RAMB36E1_20 |     1|
-|24    |RAMB36E1_21 |     1|
-|25    |RAMB36E1_22 |     1|
-|26    |RAMB36E1_23 |     1|
-|27    |RAMB36E1_24 |     1|
-|28    |RAMB36E1_3  |     1|
-|29    |RAMB36E1_4  |     1|
-|30    |RAMB36E1_5  |     1|
-|31    |RAMB36E1_6  |     1|
-|32    |RAMB36E1_7  |     1|
-|33    |RAMB36E1_8  |     1|
-|34    |RAMB36E1_9  |     1|
-|35    |FDCE        |   174|
-|36    |FDPE        |     7|
-|37    |FDRE        |   100|
-|38    |IBUF        |     4|
-|39    |OBUF        |    27|
-|40    |OBUFT       |     1|
-+------+------------+------+
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |   152|
+|3     |LUT1       |   149|
+|4     |LUT2       |   330|
+|5     |LUT3       |    53|
+|6     |LUT4       |   124|
+|7     |LUT5       |   178|
+|8     |LUT6       |   297|
+|9     |MUXF7      |     7|
+|10    |RAMB36E1   |     1|
+|11    |RAMB36E1_1 |     1|
+|12    |RAMB36E1_2 |     1|
+|13    |RAMB36E1_3 |     1|
+|14    |RAMB36E1_4 |     1|
+|15    |RAMB36E1_5 |     1|
+|16    |RAMB36E1_6 |     1|
+|17    |FDCE       |   174|
+|18    |FDPE       |     7|
+|19    |FDRE       |   100|
+|20    |IBUF       |     4|
+|21    |OBUF       |    27|
+|22    |OBUFT      |     1|
++------+-----------+------+
 
 Report Instance Areas: 
 +------+-------------------+------------------------------+------+
 |      |Instance           |Module                        |Cells |
 +------+-------------------+------------------------------+------+
-|1     |top                |                              |  1741|
+|1     |top                |                              |  1611|
 |2     |  vsync_unit       |vga_sync                      |    57|
 |3     |  object_rom_unit1 |object1_rom                   |     1|
-|4     |  bird_unit        |object_engine                 |   878|
-|5     |  pipe_rom_unit1   |object2_rom                   |    24|
-|6     |  pipe1_unit       |object_engine__parameterized0 |    76|
-|7     |  is_collideUpper  |is_collide__1                 |    95|
-|8     |  is_collideLower  |is_collide__2                 |   133|
-|9     |  is_collide1      |is_collide                    |   142|
+|4     |  bird_unit        |object_engine                 |   870|
+|5     |  pipe_rom_unit1   |object2_rom                   |     6|
+|6     |  pipe1_unit       |object_engine__parameterized0 |    73|
+|7     |  is_collideUpper  |is_collide__1                 |    90|
+|8     |  is_collideLower  |is_collide__2                 |    88|
+|9     |  is_collide1      |is_collide                    |    91|
 |10    |  score_dispaly    |score_display                 |   122|
 |11    |    show           |seg_display                   |    91|
 |12    |      ddd          |DecimalDigitDecoder           |    49|
@@ -1124,27 +1089,27 @@ Report Instance Areas:
 |22    |  game_FSM         |game_state_machine            |     8|
 +------+-------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:26 ; elapsed = 00:04:28 . Memory (MB): peak = 837.598 ; gain = 576.543
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:10 ; elapsed = 00:04:22 . Memory (MB): peak = 837.598 ; gain = 334.523
-Synthesis Optimization Complete : Time (s): cpu = 00:04:26 ; elapsed = 00:04:28 . Memory (MB): peak = 837.598 ; gain = 576.543
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 807.742 ; gain = 283.367
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 208 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 837.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 807.742 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-253 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+241 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:28 ; elapsed = 00:04:31 . Memory (MB): peak = 837.598 ; gain = 589.809
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 837.598 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 807.742 ; gain = 559.258
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 807.742 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/synth_1/display_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file display_top_utilization_synth.rpt -pb display_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May  1 15:42:33 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed May  1 16:12:41 2019...
