@@ -18,6 +18,8 @@ module display_top
 	wire [11:0] bg_rgb, object_rgb;
 	wire [9:0] o_x, o_y;
 	wire object_on;
+	wire [9:0] row, col;
+	wire [11:0] color_data_object1;
 	wire up, down, left, right, direction;
 	
 	// *** instantiate sub modules ***
@@ -27,14 +29,18 @@ module display_top
                              .video_on(video_on), .p_tick(pixel_tick), .x(x), .y(y));
 	
 	// instantiate background rom circuit
-	test_rom background_unit (.clk(clk), .row(y[7:0]), .col(x[7:0]), .color_data(bg_rgb));
+	//test_rom background_unit (.clk(clk), .row(y[7:0]), .col(x[7:0]), .color_data(bg_rgb));
+	
+	// ROMreader
+	ROMreader objects_rom (.clk(clk), .row(row), .col(col), .index(1), .color_data(color_data_object1));
 
 	// object test
 	object_test object_unit (.clk(clk), .reset(hard_reset), .btnU(up),
 				 .btnL(left), .btnR(right), .btnD(down), .video_on(video_on), .x(x), .y(y),
-				 .grounded(1), .game_over_object(0), .collision(0),
-				 .rgb_out(object_rgb), .object_out_on(object_on), .o_x(o_x), .o_y(o_y),
-				 .direction(direction));
+				 .grounded(1), .gravity(0), .jump_in_air(1), .collision(0), .no_boundary(1),
+				 .rgb_out(object_rgb), .object_out_on(object_on), .o_x(o_x), .o_y(o_y),.object_enable(1),
+				 .trans_x_on(1), .t_x(50),
+				 .x_direction(direction), .row(row), .col(col), .color_data(color_data_object1));
 
 	
 	/* Start Keyboard control logic */

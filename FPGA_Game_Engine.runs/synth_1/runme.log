@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4896 
+INFO: Helper process launched with PID 9760 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.828 ; gain = 176.516
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 439.754 ; gain = 178.152
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'display_top' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v:1]
@@ -36,67 +36,101 @@ INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/jimi1/Documents/Gi
 	Parameter START_V_RETRACE bound to: 513 - type: integer 
 	Parameter END_V_RETRACE bound to: 514 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (1#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v:1]
-INFO: [Synth 8-6157] synthesizing module 'test_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v:1]
-INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'test_rom' (2#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROMreader' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:1]
+INFO: [Synth 8-6157] synthesizing module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'object1_rom' (2#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (7) of module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:10]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (4) of module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:10]
+INFO: [Synth 8-6157] synthesizing module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'object2_rom' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (7) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:11]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (4) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:11]
+INFO: [Synth 8-6157] synthesizing module 'object3_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'object3_rom' (4#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (7) of module 'object3_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:12]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (4) of module 'object3_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:12]
+INFO: [Synth 8-6157] synthesizing module 'object4_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'object4_rom' (5#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (7) of module 'object4_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:13]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (4) of module 'object4_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROMreader' (6#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v:1]
 INFO: [Synth 8-6157] synthesizing module 'object_test' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:1]
+	Parameter MIN_X bound to: 0 - type: integer 
 	Parameter MAX_X bound to: 640 - type: integer 
 	Parameter MAX_Y bound to: 480 - type: integer 
 	Parameter MIN_Y bound to: 16 - type: integer 
 	Parameter T_W bound to: 16 - type: integer 
 	Parameter T_H bound to: 16 - type: integer 
+	Parameter START_X bound to: 320 - type: integer 
+	Parameter START_Y bound to: 320 - type: integer 
 	Parameter LEFT bound to: 0 - type: integer 
 	Parameter RIGHT bound to: 1 - type: integer 
-	Parameter UP bound to: 2 - type: integer 
-	Parameter DOWN bound to: 3 - type: integer 
+	Parameter UP bound to: 0 - type: integer 
+	Parameter DOWN bound to: 1 - type: integer 
 	Parameter no_dir bound to: 3'b000 
 	Parameter left bound to: 3'b001 
 	Parameter right bound to: 3'b010 
-	Parameter up bound to: 3'b101 
-	Parameter down bound to: 3'b110 
+	Parameter up bound to: 3'b011 
+	Parameter down bound to: 3'b100 
+	Parameter jump_up bound to: 3'b101 
+	Parameter jump_extra bound to: 3'b110 
+	Parameter jump_down bound to: 3'b111 
 	Parameter TIME_START_X bound to: 800000 - type: integer 
 	Parameter TIME_STEP_X bound to: 6000 - type: integer 
 	Parameter TIME_MIN_X bound to: 500000 - type: integer 
-	Parameter TIME_START_Y bound to: 800000 - type: integer 
-	Parameter TIME_STEP_Y bound to: 6000 - type: integer 
-	Parameter TIME_MIN_Y bound to: 500000 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:134]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:263]
-INFO: [Synth 8-6157] synthesizing module 'object_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object_rom.v:1]
-INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object_rom.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'object_rom' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object_rom.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'object_test' (4#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:1]
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:169]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:322]
+INFO: [Synth 8-6155] done synthesizing module 'object_test' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:1]
+WARNING: [Synth 8-350] instance 'object_unit' of module 'object_test' requires 30 connections, but only 25 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
 INFO: [Synth 8-6157] synthesizing module 'key_detect' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:5]
 INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
 	Parameter COUNT_MAX bound to: 19 - type: integer 
 	Parameter COUNT_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'debouncer' (5#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (6#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (9#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
 WARNING: [Synth 8-567] referenced signal 'keycodev' should be on the sensitivity list [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:35]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01110101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm' (10#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized0' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01110010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized0' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized0' (10#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized1' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01101011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized1' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized1' (10#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized2' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01110100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized2' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'key_detect' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'display_top' (9#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized2' (10#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_detect' (11#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:5]
+WARNING: [Synth 8-3848] Net bg_rgb in module/entity display_top does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'display_top' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
 WARNING: [Synth 8-3331] design key_fsm__parameterized2 has unconnected port reset
 WARNING: [Synth 8-3331] design key_fsm__parameterized1 has unconnected port reset
 WARNING: [Synth 8-3331] design key_fsm__parameterized0 has unconnected port reset
 WARNING: [Synth 8-3331] design key_fsm has unconnected port reset
-WARNING: [Synth 8-3331] design object_test has unconnected port game_over_object
 WARNING: [Synth 8-3331] design object_test has unconnected port collision
+WARNING: [Synth 8-3331] design ROMreader has unconnected port row[9]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port row[8]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port row[7]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port col[9]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port col[8]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port col[7]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port col[6]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port col[5]
+WARNING: [Synth 8-3331] design ROMreader has unconnected port col[4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 670.262 ; gain = 408.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 504.031 ; gain = 242.430
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -105,14 +139,25 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:t_y[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
+WARNING: [Synth 8-3295] tying undriven pin object_unit:trans_y_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:38]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 670.262 ; gain = 408.949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 504.031 ; gain = 242.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 670.262 ; gain = 408.949
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 504.031 ; gain = 242.430
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -123,35 +168,37 @@ Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/B
 Finished Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/display_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 869.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.539 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 869.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.539 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 869.863 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 869.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.539 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 766.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 869.863 ; gain = 608.551
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 766.539 ; gain = 504.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 869.863 ; gain = 608.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 766.539 ; gain = 504.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 869.863 ; gain = 608.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 766.539 ; gain = 504.938
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:134]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:263]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:169]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_test.v:322]
 INFO: [Synth 8-5546] ROM "x_start_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "x_time_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "y_state_next" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "y_start_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "y_start_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "y_time_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "O" won't be mapped to RAM because it is too sparse
@@ -162,7 +209,7 @@ INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:12 ; elapsed = 00:01:14 . Memory (MB): peak = 869.863 ; gain = 608.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 766.539 ; gain = 504.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -175,42 +222,48 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     20 Bit       Adders := 6     
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     20 Bit       Adders := 7     
 	   2 Input     11 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 4     
-	   3 Input      7 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   3 Input     10 Bit       Adders := 3     
 	   2 Input      5 Bit       Adders := 2     
-	   3 Input      4 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               20 Bit    Registers := 4     
-	               18 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 5     
 	               16 Bit    Registers := 2     
 	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 1     
+	               11 Bit    Registers := 4     
 	               10 Bit    Registers := 4     
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 15    
+	                1 Bit    Registers := 14    
 +---ROMs : 
-	                              ROMs := 2     
+	                              ROMs := 4     
 +---Muxes : 
-	   2 Input     20 Bit        Muxes := 30    
-	   4 Input     20 Bit        Muxes := 4     
+	   7 Input     26 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 42    
+	   4 Input     20 Bit        Muxes := 2     
+	   7 Input     20 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 2     
-	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 45    
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 69    
+	   4 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
 	  12 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -234,13 +287,25 @@ Detailed RTL Component Info :
 	               10 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
-Module test_rom 
+Module object1_rom 
 Detailed RTL Component Info : 
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 +---ROMs : 
 	                              ROMs := 1     
-Module object_rom 
+Module object2_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module object3_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module object4_rom 
 Detailed RTL Component Info : 
 +---Registers : 
 	               11 Bit    Registers := 1     
@@ -249,29 +314,35 @@ Detailed RTL Component Info :
 Module object_test 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     20 Bit       Adders := 6     
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     20 Bit       Adders := 7     
 	   2 Input     11 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 2     
-	   3 Input      7 Bit       Adders := 1     
-	   3 Input      4 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 3     
 +---Registers : 
-	               20 Bit    Registers := 4     
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 5     
 	               10 Bit    Registers := 2     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input     20 Bit        Muxes := 30    
-	   4 Input     20 Bit        Muxes := 4     
+	   7 Input     26 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 42    
+	   4 Input     20 Bit        Muxes := 2     
+	   7 Input     20 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	   7 Input      3 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
 	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 37    
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 61    
+	   4 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
 Module debouncer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -339,93 +410,73 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[6]' (FDE) to 'nolabel_line41/uut/keycode_reg[6]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[7]' (FDE) to 'nolabel_line41/uut/keycode_reg[7]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[5]' (FDE) to 'nolabel_line41/uut/keycode_reg[5]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[4]' (FDE) to 'nolabel_line41/uut/keycode_reg[4]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[3]' (FDE) to 'nolabel_line41/uut/keycode_reg[3]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[2]' (FDE) to 'nolabel_line41/uut/keycode_reg[2]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[1]' (FDE) to 'nolabel_line41/uut/keycode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line41/uut/dataprev_reg[0]' (FDE) to 'nolabel_line41/uut/keycode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[6]' (FDE) to 'nolabel_line47/uut/keycode_reg[6]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[7]' (FDE) to 'nolabel_line47/uut/keycode_reg[7]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[5]' (FDE) to 'nolabel_line47/uut/keycode_reg[5]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[4]' (FDE) to 'nolabel_line47/uut/keycode_reg[4]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[3]' (FDE) to 'nolabel_line47/uut/keycode_reg[3]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[2]' (FDE) to 'nolabel_line47/uut/keycode_reg[2]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[1]' (FDE) to 'nolabel_line47/uut/keycode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line47/uut/dataprev_reg[0]' (FDE) to 'nolabel_line47/uut/keycode_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_start_reg_reg[19] )
+INFO: [Synth 8-3886] merging instance 'object_unit/x_dir_reg_reg[2]' (FDCE) to 'object_unit/x_dir_reg_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_dir_reg_reg[1] )
+INFO: [Synth 8-3886] merging instance 'object_unit/y_dir_reg_reg[2]' (FDCE) to 'object_unit/y_dir_reg_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\y_dir_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_state_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_time_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_state_reg_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/\x_state_reg_reg[2] )
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_100' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_25' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_1' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_102' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_27' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_3' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_104' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_29' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_5' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_106' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_31' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_7' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_108' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_33' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_9' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_110' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_35' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_11' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_112' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_37' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_13' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_114' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_39' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_15' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_116' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_41' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_17' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_118' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_43' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_19' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_120' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_45' (FD) to 'background_unit/i_0/i_122'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_21' (FD) to 'background_unit/i_0/i_23'
-INFO: [Synth 8-3886] merging instance 'background_unit/i_0/i_122' (FD) to 'background_unit/i_0/i_47'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (background_unit/i_0/i_23)
-WARNING: [Synth 8-3332] Sequential element (i_23) is unused and will be removed from module test_rom.
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[0]' (FDCE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[1]' (FDCE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[2]' (FDCE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[3]' (FDCE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[4]' (FDCE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[6]' (FDPE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'object_unit/s_x_next_inferred__2/s_x_reg_reg[7]' (FDCE) to 'object_unit/s_x_next_inferred__2/s_x_reg_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (object_unit/s_x_next_inferred__2/\s_x_reg_reg[9] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 869.863 ; gain = 608.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 766.539 ; gain = 504.938
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-ROM:
-+------------+------------+---------------+----------------+
-|Module Name | RTL Object | Depth x Width | Implemented As | 
-+------------+------------+---------------+----------------+
-|test_rom    | color_data | 262144x12     | Block RAM      | 
-+------------+------------+---------------+----------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_50 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_52 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_54 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_56 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_58 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_60 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_62 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_64 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_66 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_68 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_70 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_72 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_76 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_78 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_80 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_82 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_84 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_86 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_88 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_90 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_92 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_94 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_96 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_98 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance object_unit/object_rom_unit/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance objects_rom/object_rom_unit1/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -436,7 +487,7 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:24 . Memory (MB): peak = 876.641 ; gain = 615.328
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 766.539 ; gain = 504.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -447,33 +498,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_36 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_38 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_40 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_42 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_44 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_46 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance background_unit/i_48 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-6837] The timing for the instance object_unit/object_rom_unit/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance objects_rom/object_rom_unit1/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 898.090 ; gain = 636.777
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 780.758 ; gain = 519.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -491,7 +518,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 898.090 ; gain = 636.777
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 780.758 ; gain = 519.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -504,7 +531,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 898.090 ; gain = 636.777
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 780.758 ; gain = 519.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -516,7 +543,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 898.090 ; gain = 636.777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 780.758 ; gain = 519.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -529,113 +556,65 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------------+------+
-|      |Cell        |Count |
-+------+------------+------+
-|1     |BUFG        |     1|
-|2     |CARRY4      |    46|
-|3     |LUT1        |    81|
-|4     |LUT2        |    42|
-|5     |LUT3        |    69|
-|6     |LUT4        |    79|
-|7     |LUT5        |    60|
-|8     |LUT6        |   199|
-|9     |RAMB36E1    |     1|
-|10    |RAMB36E1_1  |     1|
-|11    |RAMB36E1_10 |     1|
-|12    |RAMB36E1_11 |     1|
-|13    |RAMB36E1_12 |     1|
-|14    |RAMB36E1_13 |     1|
-|15    |RAMB36E1_14 |     1|
-|16    |RAMB36E1_15 |     1|
-|17    |RAMB36E1_16 |     1|
-|18    |RAMB36E1_17 |     1|
-|19    |RAMB36E1_18 |     1|
-|20    |RAMB36E1_19 |     1|
-|21    |RAMB36E1_2  |     1|
-|22    |RAMB36E1_20 |     1|
-|23    |RAMB36E1_21 |     1|
-|24    |RAMB36E1_22 |     1|
-|25    |RAMB36E1_23 |     1|
-|26    |RAMB36E1_24 |     1|
-|27    |RAMB36E1_25 |     1|
-|28    |RAMB36E1_26 |     1|
-|29    |RAMB36E1_27 |     1|
-|30    |RAMB36E1_28 |     1|
-|31    |RAMB36E1_29 |     1|
-|32    |RAMB36E1_3  |     1|
-|33    |RAMB36E1_30 |     1|
-|34    |RAMB36E1_31 |     1|
-|35    |RAMB36E1_32 |     1|
-|36    |RAMB36E1_33 |     1|
-|37    |RAMB36E1_34 |     1|
-|38    |RAMB36E1_35 |     1|
-|39    |RAMB36E1_36 |     1|
-|40    |RAMB36E1_37 |     1|
-|41    |RAMB36E1_38 |     1|
-|42    |RAMB36E1_39 |     1|
-|43    |RAMB36E1_4  |     1|
-|44    |RAMB36E1_40 |     1|
-|45    |RAMB36E1_41 |     1|
-|46    |RAMB36E1_42 |     1|
-|47    |RAMB36E1_43 |     1|
-|48    |RAMB36E1_44 |     1|
-|49    |RAMB36E1_45 |     1|
-|50    |RAMB36E1_46 |     1|
-|51    |RAMB36E1_47 |     1|
-|52    |RAMB36E1_48 |     1|
-|53    |RAMB36E1_5  |     1|
-|54    |RAMB36E1_6  |     1|
-|55    |RAMB36E1_7  |     1|
-|56    |RAMB36E1_8  |     1|
-|57    |RAMB36E1_9  |     1|
-|58    |FDCE        |   119|
-|59    |FDPE        |     4|
-|60    |FDRE        |    78|
-|61    |IBUF        |     4|
-|62    |OBUF        |    14|
-+------+------------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    48|
+|3     |LUT1     |    90|
+|4     |LUT2     |    77|
+|5     |LUT3     |    41|
+|6     |LUT4     |    73|
+|7     |LUT5     |    80|
+|8     |LUT6     |   115|
+|9     |RAMB36E1 |     1|
+|10    |FDCE     |   126|
+|11    |FDPE     |     4|
+|12    |FDRE     |    77|
+|13    |IBUF     |     4|
+|14    |OBUF     |    14|
++------+---------+------+
 
 Report Instance Areas: 
-+------+--------------------+------------------------+------+
-|      |Instance            |Module                  |Cells |
-+------+--------------------+------------------------+------+
-|1     |top                 |                        |   845|
-|2     |  vsync_unit        |vga_sync                |    57|
-|3     |  background_unit   |test_rom                |    62|
-|4     |  object_unit       |object_test             |   562|
-|5     |    object_rom_unit |object_rom              |     1|
-|6     |  nolabel_line41    |key_detect              |   120|
-|7     |    uut             |PS2Receiver             |    78|
-|8     |      db_clk        |debouncer__1            |    16|
-|9     |      db_data       |debouncer               |    16|
-|10    |    up_fsm          |key_fsm                 |     6|
-|11    |    down_fsm        |key_fsm__parameterized0 |     6|
-|12    |    left_fsm        |key_fsm__parameterized1 |     6|
-|13    |    right_fsm       |key_fsm__parameterized2 |     6|
-+------+--------------------+------------------------+------+
++------+---------------------+------------------------+------+
+|      |Instance             |Module                  |Cells |
++------+---------------------+------------------------+------+
+|1     |top                  |                        |   751|
+|2     |  vsync_unit         |vga_sync                |    57|
+|3     |  objects_rom        |ROMreader               |     1|
+|4     |    object_rom_unit1 |object1_rom             |     1|
+|5     |  object_unit        |object_test             |   529|
+|6     |  nolabel_line47     |key_detect              |   120|
+|7     |    uut              |PS2Receiver             |    78|
+|8     |      db_clk         |debouncer__1            |    16|
+|9     |      db_data        |debouncer               |    16|
+|10    |    up_fsm           |key_fsm                 |     6|
+|11    |    down_fsm         |key_fsm__parameterized0 |     6|
+|12    |    left_fsm         |key_fsm__parameterized1 |     6|
+|13    |    right_fsm        |key_fsm__parameterized2 |     6|
++------+---------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 898.090 ; gain = 636.777
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 780.758 ; gain = 519.156
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:20 . Memory (MB): peak = 898.090 ; gain = 437.176
-Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 898.090 ; gain = 636.777
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 780.758 ; gain = 256.648
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 780.758 ; gain = 519.156
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 898.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 780.758 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-148 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+129 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 898.090 ; gain = 650.039
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 898.090 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 780.758 ; gain = 532.422
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 780.758 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/synth_1/display_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file display_top_utilization_synth.rpt -pb display_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 12 04:32:47 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed May  1 05:10:43 2019...

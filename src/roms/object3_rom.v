@@ -1,4 +1,4 @@
-module object_rom
+module object3_rom
 	(
 		input wire clk,
 		input wire [6:0] row,
