@@ -32,7 +32,7 @@
 `define key_m 8'h3a
 
 module key_detect(
-    output [32:0]out,   
+    output [31:0]out,   
     input clk, 
     input PS2Clk,
     input PS2Data );
