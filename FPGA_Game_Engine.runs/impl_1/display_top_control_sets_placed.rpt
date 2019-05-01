@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed May  1 13:15:24 2019
+| Date         : Wed May  1 15:21:57 2019
 | Host         : MINGJIE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file display_top_control_sets_placed.rpt
 | Design       : display_top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    19 |
-| Unused register locations in slices containing registers |    78 |
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    95 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,14 +35,14 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      1 |            2 |
-|      2 |            1 |
 |      4 |            2 |
 |      5 |            2 |
+|      8 |            1 |
 |      9 |            1 |
-|     10 |            3 |
+|     10 |            4 |
 |     12 |            1 |
-|     15 |            1 |
-|    16+ |            6 |
+|     15 |            2 |
+|    16+ |            8 |
 +--------+--------------+
 
 
@@ -52,11 +52,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              15 |            8 |
-| No           | No                    | Yes                    |              16 |            8 |
+| No           | No                    | No                     |              40 |           18 |
+| No           | No                    | Yes                    |              23 |           11 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              34 |            9 |
-| Yes          | No                    | Yes                    |             111 |           59 |
+| Yes          | No                    | No                     |              34 |           12 |
+| Yes          | No                    | Yes                    |             158 |           93 |
 | Yes          | Yes                   | No                     |              26 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -67,25 +67,29 @@ Table of Contents
 +----------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+
 |        Clock Signal        |               Enable Signal               |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
 +----------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+
-|  key_detecter/CLK50MHZ     | key_detecter/uut/db_clk/Iv_i_1_n_0        |                                     |                1 |              1 |
 |  key_detecter/CLK50MHZ     | key_detecter/uut/db_data/Iv_i_1_n_0       |                                     |                1 |              1 |
-|  clk_IBUF_BUFG             |                                           |                                     |                2 |              2 |
+|  key_detecter/CLK50MHZ     | key_detecter/uut/db_clk/Iv_i_1_n_0        |                                     |                1 |              1 |
 | ~key_detecter/uut/db_clk/O | key_detecter/uut/cnt                      | key_detecter/uut/cnt[3]_i_1_n_0     |                1 |              4 |
-|  key_detecter/CLK50MHZ     |                                           |                                     |                3 |              4 |
-|  key_detecter/CLK50MHZ     | key_detecter/uut/db_data/count[4]_i_1_n_0 | key_detecter/uut/db_data/Iv_i_1_n_0 |                2 |              5 |
+|  key_detecter/CLK50MHZ     |                                           |                                     |                2 |              4 |
+|  key_detecter/CLK50MHZ     | key_detecter/uut/db_data/count[4]_i_1_n_0 | key_detecter/uut/db_data/Iv_i_1_n_0 |                1 |              5 |
 |  key_detecter/CLK50MHZ     | key_detecter/uut/db_clk/count[4]_i_1_n_0  | key_detecter/uut/db_clk/Iv_i_1_n_0  |                2 |              5 |
+|  clk_IBUF_BUFG             |                                           | hard_reset_IBUF                     |                4 |              8 |
 | ~key_detecter/uut/db_clk/O |                                           |                                     |                3 |              9 |
-|  clk_IBUF_BUFG             | bird_unit/s_y_reg[9]_i_1_n_0              | hard_reset_IBUF                     |                4 |             10 |
-|  clk_IBUF_BUFG             | vsync_unit/p_tick                         | hard_reset_IBUF                     |                4 |             10 |
+|  clk_IBUF_BUFG             | bird_unit/s_y_reg[6]_i_1_n_0              | reset                               |                4 |             10 |
+|  clk_IBUF_BUFG             | bird_unit/s_x_reg[9]_i_1_n_0              | reset                               |                4 |             10 |
+|  clk_IBUF_BUFG             | vsync_unit/p_tick                         | hard_reset_IBUF                     |                5 |             10 |
 |  clk_IBUF_BUFG             | vsync_unit/v_count_reg0                   | hard_reset_IBUF                     |                3 |             10 |
-|  clk_IBUF_BUFG             | vsync_unit/p_tick                         | rgb_reg                             |                4 |             12 |
-|  clk_IBUF_BUFG             | bird_unit/y_start_reg[19]_i_1_n_0         | hard_reset_IBUF                     |               12 |             15 |
-|  key_detecter/CLK50MHZ     | key_detecter/uut/keycode[15]_i_1_n_0      |                                     |                3 |             16 |
-|  clk_IBUF_BUFG             |                                           | hard_reset_IBUF                     |                8 |             16 |
-|  clk_IBUF_BUFG             | key_detecter/keycodev[15]_i_1_n_0         |                                     |                4 |             16 |
-|  clk_IBUF_BUFG             | bird_unit/y_time_reg[19]_i_1_n_0          | hard_reset_IBUF                     |               10 |             20 |
-|  clk_IBUF_BUFG             | bird_unit/jump_t_reg[19]_i_1_n_0          | hard_reset_IBUF                     |               15 |             20 |
-|  clk_IBUF_BUFG             | bird_unit/extra_up_reg[25]_i_1_n_0        | hard_reset_IBUF                     |               11 |             26 |
+|  clk_IBUF_BUFG             | vsync_unit/p_tick                         | rgb_reg                             |                5 |             12 |
+|  clk_IBUF_BUFG             |                                           | reset                               |                7 |             15 |
+|  clk_IBUF_BUFG             | bird_unit/y_start_reg[19]_i_1_n_0         | reset                               |               13 |             15 |
+|  clk_IBUF_BUFG             | key_detecter/keycodev[15]_i_1_n_0         |                                     |                5 |             16 |
+|  key_detecter/CLK50MHZ     | key_detecter/uut/keycode[15]_i_1_n_0      |                                     |                5 |             16 |
+|  clk_IBUF_BUFG             | bird_unit/x_start_reg[19]_i_1_n_0         | reset                               |               15 |             17 |
+|  clk_IBUF_BUFG             | bird_unit/jump_t_reg[19]_i_1_n_0          | reset                               |               15 |             20 |
+|  clk_IBUF_BUFG             | bird_unit/x_time_reg[19]_i_1_n_0          | reset                               |               13 |             20 |
+|  clk_IBUF_BUFG             | bird_unit/y_time_reg[19]_i_1_n_0          | reset                               |               10 |             20 |
+|  clk_IBUF_BUFG             | bird_unit/extra_up_reg[25]_i_1_n_0        | reset                               |               11 |             26 |
+|  clk_IBUF_BUFG             |                                           |                                     |               13 |             27 |
 +----------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+
 
 

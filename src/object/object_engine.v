@@ -8,7 +8,6 @@ module object_engine
         input wire grounded,         // input signal conveying when object is grounded on a platform
         input wire gravity,         // input signal conveying when gravity is considered
         input wire jump_in_air,     // input signal conveying when jumping in air is allowed
-	    input wire collision,        // input signal conveying when object collides with other objects
         input wire [11:0] color_data, // input signal for get colors in ROM
         input wire no_boundary,      // input signal for objects that not limited in boundary
         input wire [9:0] t_x, t_y, // input signals for transformation coordinates
@@ -81,7 +80,7 @@ module object_engine
     always @(posedge clk, posedge reset)
         if (reset)
         begin
-            x_dir_reg     <= LEFT;
+            x_dir_reg     <= RIGHT;
             y_dir_reg     <= UP;
         end
         else
@@ -544,8 +543,8 @@ module object_engine
    
     // current pixel coordinate minus current object coordinate gives ROM index
 	// column indexing depends on direction
-    assign col = (x_dir_reg == RIGHT)  ? (T_W - 1 - (x - s_x_reg)) :
-                 (x_dir_reg == LEFT)  ?            ((x - s_x_reg)) : 0;
+    assign col = (x_dir_reg == LEFT)  ? (T_W - 1 - (x - s_x_reg)) :
+                 (x_dir_reg == RIGHT)  ?            ((x - s_x_reg)) : 0;
     
     // row indexing
     assign row = (y_dir_reg == UP)  ? (y - s_y_reg): 

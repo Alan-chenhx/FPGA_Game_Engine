@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,7 +40,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/ROMreader.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v
@@ -48,6 +48,10 @@ read_verilog -library xil_defaultlib {
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/thirty_bit_lfsr.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/transfer.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/iscollision.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/score_generator.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/seven_seg_display.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
