@@ -1,16 +1,13 @@
-module transfer(
-    input wire clk,
-    inout wire [3:0]sw,
-    input wire [8:0]w,
-    output wire [8:0]x_out,
-    output wire [8:0]y_out
+module translate(
+    input clk,
+    inout [3:0]sw,
+    output [9:0]x_out
 );
-    parameter START_X = 320;
-    reg [8:0] xx = START_X;
-    
-    wire [8:0]yy;
+    parameter START_X = 256;
+    reg [9:0] xx = START_X;
+ 
     reg [31:0] counter=1;
-    reg temp_clk = 0 ;
+    reg temp_clk = 0;
     always @ (posedge ( clk ) )
         begin
         if (counter== 2500000 )
@@ -21,13 +18,11 @@ module transfer(
              else
                 counter <= counter+1;
             end
-    wire clk_out = temp_clk ;
+    assign clk_out = temp_clk ;
    
     always@(posedge clk_out)
     begin
-        xx=xx-sw;
+        xx<=xx-sw;
     end
-    random_height(.clk(clk),.x(xx),.w(w),.y(yy));
-    assign y_out=yy;
     assign x_out=xx;
 endmodule
