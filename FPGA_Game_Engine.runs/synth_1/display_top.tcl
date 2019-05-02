@@ -36,8 +36,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/test_rom.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v
@@ -47,11 +45,18 @@ read_verilog -library xil_defaultlib {
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/game/game_state_machine.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/thirty_bit_lfsr.v
-  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/transfer.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/iscollision.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/score_generator.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/seven_seg_display.v
   C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/gameover_display.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/gameover_rom.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/game_logo_rom.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/game_logo_display.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/thirty_bit_lfsr.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/BCDToLED.v
+  C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

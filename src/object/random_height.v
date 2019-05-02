@@ -3,7 +3,7 @@ module random_height(
     input [9:0]x,
     output [9:0]y
 );
-    parameter START_Y=150;
+    parameter START_Y=200;
     wire [29:0]rand;
     reg [9:0] out;
     reg [31:0] counter = 1;
@@ -30,7 +30,7 @@ module random_height(
             if(x>642)
             begin
                 out=rand[9:0];
-                out=out%400+40;
+                out=out%400+65;
                 // out=out+(out%2+1)*100;
                 y_next = out; 
             end

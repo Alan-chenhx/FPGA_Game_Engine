@@ -33,7 +33,7 @@ module object_engine
     parameter T_H = 16;
 
     // starting position
-    parameter START_X = 320;
+    parameter START_X = 150;
     parameter START_Y = 240;
 
     // output width and height

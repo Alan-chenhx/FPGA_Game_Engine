@@ -1,151 +1,19 @@
-## Resolution
-- 480*640 pixels
-- 120*160 tiles
+**Dear TAs and Instructors,**
 
-## Background Picture
-- format : 
-  - 480*640 12bit-RGB = 460800 Bytes
+Thanks for giving us the opportunity for demonstrating our project. We did want to do a good final project, as well as a good demo. In case of the limitation of our short demonstration, we’d like to give a more detailed overview and explanation of our project. 
 
-## Object
-- attributes:
-  1. *type: 2bits (0: player, 1: wall, 2: monster)*
-  2. *shape: 2bits*
-  3. *x_size: 8bits*
-  4. *y_size: 7bits*
-  5. *color: 12bits RGB*
-  6. *move_enable: 1bit*
-  7. *control_enable: 1bit*
-  8. *trail_length (number of tiles, >0 means being enabled): 15bits*
-  9. *init_x_velocity*
-  10. *init_y_velocity*
-  11. *x*
-  12. *y*
-  13. visible / enable
-  14. x_velocity
-  15. y_velocity
-  16. score
-- max number of objects: 128, 2^7
-- attributes in *Italian* are initially read from ROM 
-- max number of players: 2
-- players are always at the head of the object data
+Our basic philosophy of design is to make a modular, easy-to-use, and flexible hardware game engine for FPGA gaming development. In order to achieve it, we broke it into a clear file structure with different functionality for each part: ROMs, basic helper modules, display modules, keyboard, object control, game control, and seven-segment display. Unfortunately, our final simple Flappy Bird demo still has some bugs, but we did several small demos and a lot of unit tests and we think our modules perform each of their own functions perfectly well.
 
-## Event Function
-- dynamic functions for collision events
-- read from ROM
-- max number of functions: 64, 2^6
-- format:
-  - colliding obects
-    - type: 2bits (0: type to type, 1: type to object | object to type, 2: object to object)
-    - A_number: 7bits
-    - B_number: 7bits
-    - A_attribute: 4bits
-    - B_attribute: 4bits
-    - A_operation: 2bits (0: set to, 1:add, 2:mul)
-    - B_operation: 2bits (0: set to, 1:add, 2:mul)
-    - A_param: 8bits (signed number)
-    - B_param: 8bits (signed number)
+ROMs are a very important part for our flexibility, which allows us to change the layout, background or bitmaps for the scenario, maps or objects. We tried hard but didn’t manage to use the QSPI Flash memory in which we can change our data without re-synthesizing other parts. As a result, we chose block memories, which unfortunately caused the synthesis process to become longer, and used the concatenation of row and column to index data. In order to store color data in the memory easily, we also made a python-based program to convert BMP pictures into our ROM modules. We also considered to use ROMs to store transformation information for object movements such that transformations can be dynamically loaded, but given the time restraint, we haven’t finished it.
 
-## ROM Data Format
+For display modules, we have a standard VGA sync and game-over/game-logo displaying modules, as well as a display-top module functioning as a connector of objects and a compositor of the display. With the same method as in game-over/game-logo displaying modules, we can modify modules to display any game stages readily. With the support of background ROM, changing background can also be done without modify any displaying module, and we gave the functionality to repeat a small background picture to cover the whole screen.
 
-- starting from the end of the memory, going up
-- 1. background picture
-  2. object number
-  3. objects
-  4. function number
-  5. function
+Our keyboard module is a essential part of basic IO. Outputting a 32-wide bus of key pressing signals, it can handle multi-pressing events and doesn’t cause any blocking and stalling.
 
-## MODULE objects_registers
+Seven segment display is also an important IO module for displaying scores. Based on the standard 7-segment module, we also finished a simple score displaying module which can support two modes: single player mode and two players mode. For further polishing, it could be better to receive the reset signal in order to support refreshing scores in a new round of game.
 
-- inputs:
-  - wr_en: 1bit
-  - obj_num: 7bits
-  - obj_attr1: 4bits (wr_attr)
-  - obj_attr2: 4bits
-  - obj_attr3: 4bits
-  - wr_value: 8bits
-  - clk
-  - reset
-- outputs:
-  - attr1_v: 8bits
-  - attr2_v: 8bits
-  - attr3_v: 8bits
-- functionality:
-  - store the current states and data of objects
-  - basically is an array of registers
-  - read 3 attributes from 1 object each time
-  - write 1 attribute to the object each time
+For game control, we created a game Finite State Machine to provide the functionality of deciding game stages, which can be easily extended, and resetting the game after game-over. 
 
-## MODULE functions_registers
+The most powerful part is our object control modules. We’d like to provide as much flexibility as we can to the users, so we decided to use a comprehensive protocol for object movements. We used the object_engine module to provide movement control for the objects controlled by players, and the module can receive four keys from the keyboard and control objects’ movements in X and Y directions independently. It may be worth mentioning that the movements in four directions can be set to display different animations. We used signals such as gravity and grounded to handle different situations where the object is in the air/on the ground and with/without gravity, and signals such as jump_in_air to let developers decide the jump behavior of the object in the air. Furthermore, we used timing registers to simulate the natural accelerating and terminating behaviors of movements, such as the terminal speed when falling in the air. We also used no-boundary signals to change the behavior of the object with respect to boundaries. To maximize flexibility, we used parameters to instantiate an object so that the default value of the attributes like velocity, starting point, boundaries, etc. can be easily modified. On top of these movements, we also provided the interface/signals to accept customized transformations/translations, which ideally can be read from the memory, based on the communications regarding the objects’ current attributes/behaviors. We used it to provide the translation and random-heights of the tubes in our demo. We also finished a collision judging module that can check whether a collision occurs between any two objects. With these object control modules, in collaboration with our IO modules, the engine ideally can create complex behaviors and responses. For example, the player’s object can respond to some key pressings such that it spits small ‘weapons’ to hit the ghosts.  
 
-- inputs:
-  - funct_num: 6bits
-  - clk
-  - reset
-- outputs:
-  - type: 2bits 
-  - A_num: 7bits
-  - B_num: 7bits
-  - A_attr: 4bits
-  - B_attr: 4bits
-  - A_op: 2bits
-  - B_op: 2bits
-  - A_param: 8bits
-  - B_param: 8bits
-- functionality:
-  - store event functions
-  - read only
-
-## MODULE synthesizer
-
-- inputs:
-  - clk
-  - vga_x
-  - vga_y
-- outputs:
-  - red
-  - green
-  - blue
-- functionality:
-  - synthesize different layers to vga
-    - background
-    - objects
-    - mouse cursor
-  - render objects
-    - judge whether this pixel lies in a object
-
-## MODULE ROM_reader
-
- - inputs:
-    - addr
-    - bits
-    - clk
-- ouputs:
-  - data: 16bits
-- functionality:
-  - read from the given number of bits from the address
-  - always output 16bits data, the redundant bits are sign-extended
-
-## MODULE PS2_receiver
-
- - inputs:
-
-    - clk
-    - kclk / PS2clk
-    - kdata / PS2data
-- outputs:
-
-  - keycodeout
-- functionality:
-    - receive keyboard pressing
-    - output corresponding keycodes
-
-### MODULE debouncer
-
-## MODULE keyboard_control
-
-## MODULE movement_control
-
-## MODULE collision_checker
-
-
-
+ 

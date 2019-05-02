@@ -42,7 +42,7 @@ module display_top
 	wire [31:0] keys;											  // keyboard keys
 	wire [5:0] collisions;										  // route signal to detect collisions between objects
 	wire gameover_on;											  // route signal conveying if game is over.
-	wire up = keys[4] && game_en;								  // up control for birds
+	wire up = keys[0] && game_en;								  // up control for birds
 	wire start = sw[0] || sw[1] || sw[2] || sw[3];
 	
 	// *** instantiate sub modules ***
@@ -59,34 +59,34 @@ module display_top
 	translate #(210) translate1 (.clk(clk), .sw(sw), .x_out(t_x1));
 	translate #(410) translate2 (.clk(clk), .sw(sw), .x_out(t_x2));
 	translate #(610) translate3 (.clk(clk), .sw(sw), .x_out(t_x3));
-	random_height rh1(.clk(clk),.x(t_x1),.y(t_y1));
-	random_height rh2(.clk(clk),.x(t_x2),.y(t_y2));
-	random_height rh3(.clk(clk),.x(t_x3),.y(t_y3));
+	random_height rh1(.clk(clk),.x(pipe1_x),.y(t_y1));
+	random_height rh2(.clk(clk),.x(pipe2_x),.y(t_y2));
+	random_height rh3(.clk(clk),.x(pipe3_x),.y(t_y3));
 
 	// bird
 	object1_rom object_rom_unit1 (.clk(clk), .row(object_row), .col(object_col), .color_data(color_data_object));
-	object_engine #(.T_W(32), .T_H(23)) bird_unit (.clk(clk), .reset(reset), 
+	object_engine #(.T_W(32), .T_H(23), .START_X(90)) bird_unit (.clk(clk), .reset(reset), 
 				 .btnU(up), .video_on(video_on), .x(x), .y(y),
 				 .grounded(0), .gravity(1), .jump_in_air(1),
 				 .rgb_out(object_rgb), .object_out_on(object_on), .o_x(bird_x), .o_y(bird_y),.object_enable(1),
 				 .row(object_row), .col(object_col), .color_data(color_data_object));
 	// pipes
 	object2_rom pipe_rom_unit1 (.clk(clk), .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipe1));
-	object_engine #(.T_W(52), .T_H(450)) pipe1_unit (.clk(clk), .reset(reset), 
+	object_engine #(.T_W(52), .T_H(450), .START_X(210)) pipe1_unit (.clk(clk), .reset(reset), 
 				 .video_on(video_on), .x(x), .y(y), .no_boundary(1),
-				 .trans_x_on(1),.trans_y_on(1),.t_x(t_x1), .t_y(t_y1),
+				 .trans_x_on(1), .t_x(t_x1),.trans_y_on(1), .t_y(t_y1),
 				 .rgb_out(pipe_rgb1), .object_out_on(pipes_on[1]), .o_x(pipe1_x), .o_y(pipe1_y),.object_enable(1),
 				 .row(pipe1_row), .col(pipe1_col), .color_data(color_data_pipe1));
 	object2_rom pipe_rom_unit2 (.clk(clk), .row(pipe2_row), .col(pipe2_col), .color_data(color_data_pipe2));
-	object_engine #(.T_W(52), .T_H(450)) pipe2_unit (.clk(clk), .reset(reset), 
+	object_engine #(.T_W(52), .T_H(450), .START_X(410)) pipe2_unit (.clk(clk), .reset(reset), 
 				 .video_on(video_on), .x(x), .y(y), .no_boundary(1),
-				 .trans_x_on(1),.trans_y_on(1),.t_x(t_x2), .t_y(t_y2),
+				 .trans_x_on(1), .t_x(t_x2),.trans_y_on(1), .t_y(t_y2),
 				 .rgb_out(pipe_rgb2), .object_out_on(pipes_on[2]), .o_x(pipe2_x), .o_y(pipe2_y),.object_enable(1),
 				 .row(pipe2_row), .col(pipe2_col), .color_data(color_data_pipe2));
 	object2_rom pipe_rom_unit3 (.clk(clk), .row(pipe3_row), .col(pipe3_col), .color_data(color_data_pipe3));
-	object_engine #(.T_W(52), .T_H(450)) pipe3_unit (.clk(clk), .reset(reset), 
+	object_engine #(.T_W(52), .T_H(450),.START_X(610)) pipe3_unit (.clk(clk), .reset(reset), 
 				 .video_on(video_on), .x(x), .y(y), .no_boundary(1),
-				 .trans_x_on(1),.trans_y_on(1),.t_x(t_x3), .t_y(t_y3),
+				 .trans_x_on(1), .t_x(t_x3),.trans_y_on(1), .t_y(t_y3),
 				 .rgb_out(pipe_rgb3), .object_out_on(pipes_on[3]), .o_x(pipe3_x), .o_y(pipe3_y),.object_enable(1),
 				 .row(pipe3_row), .col(pipe3_col), .color_data(color_data_pipe3));
 
@@ -96,8 +96,8 @@ module display_top
 	
 	// collision
 	is_collide is_collide1(.f_x(bird_x), .f_y(bird_y),.s_x(pipe1_x), .s_y(pipe1_y), .f_w(32),.f_h(23),.s_h(640),.s_w(52), .collision(collisions[1]));
-	iscollide is_collide2(.f_x(bird_x), .f_y(bird_y),.s_x(pipe2_x), .s_y(pipe2_y), .f_w(32),.f_h(23),.s_h(640),.s_w(52), .collision(collisions[2]));
-	iscollide is_collide3(.f_x(bird_x), .f_y(bird_y),.s_x(pipe3_x), .s_y(pipe3_y), .f_w(32),.f_h(23),.s_h(640),.s_w(52), .collision(collisions[3]));
+	is_collide is_collide2(.f_x(bird_x), .f_y(bird_y),.s_x(pipe2_x), .s_y(pipe2_y), .f_w(32),.f_h(23),.s_h(640),.s_w(52), .collision(collisions[2]));
+	is_collide is_collide3(.f_x(bird_x), .f_y(bird_y),.s_x(pipe3_x), .s_y(pipe3_y), .f_w(32),.f_h(23),.s_h(640),.s_w(52), .collision(collisions[3]));
 
 	wire collision = collisions[1] || collisions[2] || collisions[3] || collisions[4] || collisions[5];
     assign led[0]=collision;

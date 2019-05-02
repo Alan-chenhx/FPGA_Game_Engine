@@ -15,13 +15,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6940 
+INFO: Helper process launched with PID 16824 
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:29]
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:31]
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:32]
 WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object4_rom.v:33]
+WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:29]
+WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:31]
+WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:32]
+WARNING: [Synth 8-2292] literal value truncated to fit in 2 bits [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object3_rom.v:33]
+WARNING: [Synth 8-2490] overwriting previous definition of module thirty_bit_lfsr [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/thirty_bit_lfsr.v:1]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 440.160 ; gain = 178.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 403.852 ; gain = 142.371
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'display_top' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
 	Parameter idle bound to: 3'b001 
@@ -42,11 +47,35 @@ INFO: [Synth 8-6157] synthesizing module 'vga_sync' [C:/Users/jimi1/Documents/Gi
 	Parameter START_V_RETRACE bound to: 513 - type: integer 
 	Parameter END_V_RETRACE bound to: 514 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (1#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/vga_sync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'background_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'background_rom' (2#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/background_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (9) of module 'background_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:55]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (6) of module 'background_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:55]
+INFO: [Synth 8-6157] synthesizing module 'translate' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v:1]
+	Parameter START_X bound to: 210 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'translate' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v:1]
+WARNING: [Synth 8-6104] Input port 'sw' has an internal driver [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:59]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized0' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v:1]
+	Parameter START_X bound to: 410 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized0' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v:1]
+WARNING: [Synth 8-6104] Input port 'sw' has an internal driver [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:60]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized1' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v:1]
+	Parameter START_X bound to: 610 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized1' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/translate.v:1]
+WARNING: [Synth 8-6104] Input port 'sw' has an internal driver [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:61]
+INFO: [Synth 8-6157] synthesizing module 'random_height' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v:1]
+	Parameter START_Y bound to: 200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'thirty_bit_lfsr' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/thirty_bit_lfsr.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'thirty_bit_lfsr' (4#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/thirty_bit_lfsr.v:1]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v:27]
+WARNING: [Synth 8-567] referenced signal 'rand' should be on the sensitivity list [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'random_height' (5#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v:1]
 INFO: [Synth 8-6157] synthesizing module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:1]
 INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'object1_rom' (2#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:1]
-WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (6) of module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:64]
-WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (5) of module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'object1_rom' (6#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object1_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (6) of module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:67]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (5) of module 'object1_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:67]
 INFO: [Synth 8-6157] synthesizing module 'object_engine' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
 	Parameter MIN_X bound to: 0 - type: integer 
 	Parameter MAX_X bound to: 640 - type: integer 
@@ -54,7 +83,7 @@ INFO: [Synth 8-6157] synthesizing module 'object_engine' [C:/Users/jimi1/Documen
 	Parameter MIN_Y bound to: 16 - type: integer 
 	Parameter T_W bound to: 32 - type: integer 
 	Parameter T_H bound to: 23 - type: integer 
-	Parameter START_X bound to: 320 - type: integer 
+	Parameter START_X bound to: 90 - type: integer 
 	Parameter START_Y bound to: 240 - type: integer 
 	Parameter LEFT bound to: 0 - type: integer 
 	Parameter RIGHT bound to: 1 - type: integer 
@@ -78,21 +107,21 @@ INFO: [Synth 8-6157] synthesizing module 'object_engine' [C:/Users/jimi1/Documen
 	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
-INFO: [Synth 8-6155] done synthesizing module 'object_engine' (3#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
-WARNING: [Synth 8-350] instance 'bird_unit' of module 'object_engine' requires 29 connections, but only 20 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'object_engine' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
+WARNING: [Synth 8-350] instance 'bird_unit' of module 'object_engine' requires 29 connections, but only 17 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
 INFO: [Synth 8-6157] synthesizing module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
 INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'object2_rom' (4#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
-WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (8) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:71]
-WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (6) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'object2_rom' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/object2_rom.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (9) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:74]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (6) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:74]
 INFO: [Synth 8-6157] synthesizing module 'object_engine__parameterized0' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
 	Parameter MIN_X bound to: 0 - type: integer 
 	Parameter MAX_X bound to: 640 - type: integer 
 	Parameter MAX_Y bound to: 480 - type: integer 
 	Parameter MIN_Y bound to: 16 - type: integer 
 	Parameter T_W bound to: 52 - type: integer 
-	Parameter T_H bound to: 640 - type: integer 
-	Parameter START_X bound to: 320 - type: integer 
+	Parameter T_H bound to: 450 - type: integer 
+	Parameter START_X bound to: 210 - type: integer 
 	Parameter START_Y bound to: 240 - type: integer 
 	Parameter LEFT bound to: 0 - type: integer 
 	Parameter RIGHT bound to: 1 - type: integer 
@@ -116,142 +145,211 @@ INFO: [Synth 8-6157] synthesizing module 'object_engine__parameterized0' [C:/Use
 	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
-INFO: [Synth 8-6155] done synthesizing module 'object_engine__parameterized0' (4#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
-WARNING: [Synth 8-350] instance 'pipe1_unit' of module 'object_engine' requires 29 connections, but only 14 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'object_engine__parameterized0' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
+WARNING: [Synth 8-350] instance 'pipe1_unit' of module 'object_engine' requires 29 connections, but only 18 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (9) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:80]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (6) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:80]
+INFO: [Synth 8-6157] synthesizing module 'object_engine__parameterized1' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
+	Parameter MIN_X bound to: 0 - type: integer 
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter MIN_Y bound to: 16 - type: integer 
+	Parameter T_W bound to: 52 - type: integer 
+	Parameter T_H bound to: 450 - type: integer 
+	Parameter START_X bound to: 410 - type: integer 
+	Parameter START_Y bound to: 240 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter UP bound to: 0 - type: integer 
+	Parameter DOWN bound to: 1 - type: integer 
+	Parameter no_dir bound to: 3'b000 
+	Parameter left bound to: 3'b001 
+	Parameter right bound to: 3'b010 
+	Parameter up bound to: 3'b011 
+	Parameter down bound to: 3'b100 
+	Parameter jump_up bound to: 3'b101 
+	Parameter jump_extra bound to: 3'b110 
+	Parameter jump_down bound to: 3'b111 
+	Parameter TIME_START_X bound to: 800000 - type: integer 
+	Parameter TIME_STEP_X bound to: 6000 - type: integer 
+	Parameter TIME_MIN_X bound to: 500000 - type: integer 
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
+INFO: [Synth 8-6155] done synthesizing module 'object_engine__parameterized1' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
+WARNING: [Synth 8-350] instance 'pipe2_unit' of module 'object_engine' requires 29 connections, but only 18 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-689] width (10) of port connection 'row' does not match port width (9) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:86]
+WARNING: [Synth 8-689] width (10) of port connection 'col' does not match port width (6) of module 'object2_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:86]
+INFO: [Synth 8-6157] synthesizing module 'object_engine__parameterized2' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
+	Parameter MIN_X bound to: 0 - type: integer 
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter MIN_Y bound to: 16 - type: integer 
+	Parameter T_W bound to: 52 - type: integer 
+	Parameter T_H bound to: 450 - type: integer 
+	Parameter START_X bound to: 610 - type: integer 
+	Parameter START_Y bound to: 240 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter UP bound to: 0 - type: integer 
+	Parameter DOWN bound to: 1 - type: integer 
+	Parameter no_dir bound to: 3'b000 
+	Parameter left bound to: 3'b001 
+	Parameter right bound to: 3'b010 
+	Parameter up bound to: 3'b011 
+	Parameter down bound to: 3'b100 
+	Parameter jump_up bound to: 3'b101 
+	Parameter jump_extra bound to: 3'b110 
+	Parameter jump_down bound to: 3'b111 
+	Parameter TIME_START_X bound to: 800000 - type: integer 
+	Parameter TIME_STEP_X bound to: 6000 - type: integer 
+	Parameter TIME_MIN_X bound to: 500000 - type: integer 
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
+INFO: [Synth 8-6155] done synthesizing module 'object_engine__parameterized2' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:1]
+WARNING: [Synth 8-350] instance 'pipe3_unit' of module 'object_engine' requires 29 connections, but only 18 given [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
 INFO: [Synth 8-6157] synthesizing module 'is_collide' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/iscollision.v:1]
 	Parameter LEFT bound to: 0 - type: integer 
 	Parameter RIGHT bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'is_collide' (5#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/iscollision.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'is_collide' (9#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/iscollision.v:1]
 INFO: [Synth 8-6157] synthesizing module 'score_generator' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/score_generator.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'score_generator' (6#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/score_generator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'score_generator' (10#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/score_generator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'score_display' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:1]
 INFO: [Synth 8-6157] synthesizing module 'seg_display' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/seven_seg_display.v:1]
 INFO: [Synth 8-6157] synthesizing module 'DecimalDigitDecoder' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v:219]
-INFO: [Synth 8-6155] done synthesizing module 'DecimalDigitDecoder' (7#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v:219]
-INFO: [Synth 8-6155] done synthesizing module 'seg_display' (8#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/seven_seg_display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DecimalDigitDecoder' (11#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/basic_modules/basic_modules.v:219]
+INFO: [Synth 8-6155] done synthesizing module 'seg_display' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/seven_seg_display.v:1]
 WARNING: [Synth 8-3848] Net reset in module/entity score_display does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'score_display' (9#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:1]
-WARNING: [Synth 8-689] width (10) of port connection 'num2' does not match port width (7) of module 'score_display' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:116]
+INFO: [Synth 8-6155] done synthesizing module 'score_display' (13#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_detect' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:34]
 INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
 	Parameter COUNT_MAX bound to: 19 - type: integer 
 	Parameter COUNT_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'debouncer' (10#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (14#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/debouncer.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (11#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (15#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/PS2Receiver.v:23]
 WARNING: [Synth 8-567] referenced signal 'keycodev' should be on the sensitivity list [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:61]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01110101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized0' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01101011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized0' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized0' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized1' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01110010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized1' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized1' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized2' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01110100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized2' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized2' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized3' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00101001 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized3' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized3' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized4' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00001101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized4' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized4' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized5' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00010101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized5' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized5' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized6' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00011101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized6' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized6' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized7' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00100100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized7' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized7' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized8' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00101101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized8' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized8' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized9' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00101100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized9' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized9' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized10' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00110101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized10' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized10' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized11' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00111100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized11' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized11' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized12' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01000011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized12' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized12' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized13' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01000100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized13' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized13' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized14' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01001101 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized14' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized14' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized15' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00011100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized15' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized15' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized16' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00011011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized16' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized16' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized17' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00100011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized17' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized17' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized18' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00101011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized18' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized18' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized19' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00110100 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized19' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized19' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized20' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00110011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized20' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized20' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized21' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00111011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized21' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized21' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized22' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01000010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized22' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized22' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized23' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b01001011 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized23' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized23' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized24' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b0001zzzz 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized24' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized24' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized25' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00100010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized25' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized25' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized26' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00100001 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized26' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized26' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized27' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00101010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized27' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized27' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized28' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00110010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized28' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized28' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized29' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00110001 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized29' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized29' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'key_fsm__parameterized30' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 	Parameter desired_key_id bound to: 8'b00111010 
-INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized30' (12#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_fsm__parameterized30' (16#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_fsm.v:1]
 WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:72]
-INFO: [Synth 8-6155] done synthesizing module 'key_detect' (13#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'key_detect' (17#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/keyboard/key_top.v:34]
 INFO: [Synth 8-6157] synthesizing module 'game_state_machine' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/game/game_state_machine.v:1]
 	Parameter init bound to: 3'b000 
 	Parameter idle bound to: 3'b001 
 	Parameter playing bound to: 3'b010 
 	Parameter gameover bound to: 3'b100 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/game/game_state_machine.v:54]
-INFO: [Synth 8-6155] done synthesizing module 'game_state_machine' (14#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/game/game_state_machine.v:1]
-WARNING: [Synth 8-3848] Net gameover_rgb in module/entity display_top does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:29]
-WARNING: [Synth 8-3848] Net pipe_rgb2 in module/entity display_top does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:28]
-WARNING: [Synth 8-3848] Net pipe_rgb3 in module/entity display_top does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:28]
-WARNING: [Synth 8-3848] Net bg_rgb in module/entity display_top does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:27]
-WARNING: [Synth 8-3848] Net gameover_on in module/entity display_top does not have driver. [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'display_top' (15#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'game_state_machine' (18#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/game/game_state_machine.v:1]
+INFO: [Synth 8-6157] synthesizing module 'gameover_display' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/gameover_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'gameover_rom' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/gameover_rom.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/gameover_rom.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'gameover_rom' (19#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/roms/gameover_rom.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gameover_display' (20#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/gameover_display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'display_top' (21#1) [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:5]
 WARNING: [Synth 8-3331] design key_fsm__parameterized24 has unconnected port keycode[15]
 WARNING: [Synth 8-3331] design key_fsm__parameterized24 has unconnected port keycode[14]
 WARNING: [Synth 8-3331] design key_fsm__parameterized24 has unconnected port keycode[13]
@@ -269,13 +367,10 @@ WARNING: [Synth 8-3331] design key_fsm__parameterized24 has unconnected port key
 WARNING: [Synth 8-3331] design key_fsm__parameterized24 has unconnected port keycode[1]
 WARNING: [Synth 8-3331] design key_fsm__parameterized24 has unconnected port keycode[0]
 WARNING: [Synth 8-3331] design seg_display has unconnected port enable
+WARNING: [Synth 8-3331] design thirty_bit_lfsr has unconnected port reset
 WARNING: [Synth 8-3331] design display_top has unconnected port led[1]
-WARNING: [Synth 8-3331] design display_top has unconnected port sw[3]
-WARNING: [Synth 8-3331] design display_top has unconnected port sw[2]
-WARNING: [Synth 8-3331] design display_top has unconnected port sw[1]
-WARNING: [Synth 8-3331] design display_top has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 526.492 ; gain = 265.234
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 597.566 ; gain = 336.086
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -285,66 +380,68 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin show:reset to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/seven_segment/score.v:19]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:no_boundary to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:trans_x_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin bird_unit:trans_y_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:65]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnU to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnL to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnR to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnD to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:grounded to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:gravity to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:jump_in_air to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_x[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:t_y[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:trans_x_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
-WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:trans_y_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:72]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:btnL to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:btnR to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:btnD to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:no_boundary to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_x[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[9] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[8] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[7] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:t_y[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:trans_x_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin bird_unit:trans_y_on to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:68]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnU to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnL to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnR to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:btnD to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:grounded to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:gravity to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe1_unit:jump_in_air to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:75]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:btnU to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:btnL to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:btnR to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:btnD to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:grounded to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:gravity to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe2_unit:jump_in_air to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:81]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:btnU to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:btnL to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:btnR to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:btnD to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:grounded to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:gravity to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin pipe3_unit:jump_in_air to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:87]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[6] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[5] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[4] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[3] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[2] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[1] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
+WARNING: [Synth 8-3295] tying undriven pin score_dispaly:num2[0] to constant 0 [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/display/display_top.v:107]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 526.492 ; gain = 265.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.566 ; gain = 336.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 526.492 ; gain = 265.234
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 597.566 ; gain = 336.086
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -355,31 +452,55 @@ Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/B
 Finished Parsing XDC File [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/display_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 789.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 865.008 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 865.117 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.609 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 789.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 865.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 865.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 789.609 ; gain = 528.352
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 865.148 ; gain = 603.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 789.609 ; gain = 528.352
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 865.148 ; gain = 603.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 789.609 ; gain = 528.352
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 865.148 ; gain = 603.668
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "temp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "temp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "temp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "temp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
+INFO: [Synth 8-5546] ROM "x_start_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "x_time_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "y_state_next" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "y_start_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y_start_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y_time_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
+INFO: [Synth 8-5546] ROM "x_start_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "x_time_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "y_state_next" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "y_start_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y_start_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y_time_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:168]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/object_engine.v:321]
 INFO: [Synth 8-5546] ROM "x_start_next" won't be mapped to RAM because it is too sparse
@@ -432,8 +553,9 @@ INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "temp_pressed0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'y_next_reg' [C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/src/object/random_height.v:29]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 789.609 ; gain = 528.352
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:37 ; elapsed = 00:05:39 . Memory (MB): peak = 865.148 ; gain = 603.668
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -446,60 +568,63 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     26 Bit       Adders := 4     
-	   2 Input     20 Bit       Adders := 14    
+	   2 Input     32 Bit       Adders := 7     
+	   2 Input     26 Bit       Adders := 8     
+	   2 Input     20 Bit       Adders := 28    
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 8     
-	   2 Input     10 Bit       Adders := 20    
-	   3 Input     10 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 16    
+	   2 Input     10 Bit       Adders := 37    
+	   3 Input     10 Bit       Adders := 15    
+	   2 Input      7 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 45    
+	   2 Input      4 Bit       Adders := 46    
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 3     
 +---Registers : 
-	               32 Bit    Registers := 1     
-	               26 Bit    Registers := 2     
-	               20 Bit    Registers := 10    
+	               32 Bit    Registers := 7     
+	               30 Bit    Registers := 3     
+	               26 Bit    Registers := 4     
+	               20 Bit    Registers := 20    
 	               16 Bit    Registers := 2     
-	               14 Bit    Registers := 1     
+	               15 Bit    Registers := 4     
 	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 6     
-	                8 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 13    
+	                8 Bit    Registers := 6     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 9     
+	                3 Bit    Registers := 17    
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 45    
+	                1 Bit    Registers := 54    
 +---Multipliers : 
 	                  7x7  Multipliers := 1     
 +---ROMs : 
-	                              ROMs := 2     
+	                              ROMs := 6     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   7 Input     26 Bit        Muxes := 2     
-	   2 Input     26 Bit        Muxes := 2     
-	   2 Input     20 Bit        Muxes := 84    
-	   4 Input     20 Bit        Muxes := 4     
-	   7 Input     20 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 7     
+	   7 Input     26 Bit        Muxes := 4     
+	   2 Input     26 Bit        Muxes := 4     
+	   2 Input     20 Bit        Muxes := 168   
+	   4 Input     20 Bit        Muxes := 8     
+	   7 Input     20 Bit        Muxes := 4     
 	   2 Input     14 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 2     
-	   6 Input     12 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 12    
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 24    
 	   2 Input      4 Bit        Muxes := 36    
 	   4 Input      4 Bit        Muxes := 2     
-	   4 Input      3 Bit        Muxes := 2     
-	   3 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 6     
+	   4 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 12    
 	   5 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 8     
-	   4 Input      2 Bit        Muxes := 2     
-	   7 Input      2 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 159   
-	   4 Input      1 Bit        Muxes := 8     
-	   7 Input      1 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 16    
+	   4 Input      2 Bit        Muxes := 4     
+	   7 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 290   
+	   3 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 16    
+	   7 Input      1 Bit        Muxes := 4     
 	  12 Input      1 Bit        Muxes := 2     
 	   5 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
@@ -513,8 +638,6 @@ Module display_top
 Detailed RTL Component Info : 
 +---Registers : 
 	               12 Bit    Registers := 1     
-+---Muxes : 
-	   6 Input     12 Bit        Muxes := 1     
 Module vga_sync 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -524,6 +647,68 @@ Detailed RTL Component Info :
 	               10 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
+Module background_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               15 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module translate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module translate__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module translate__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module thirty_bit_lfsr 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module random_height 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module object1_rom 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -565,10 +750,74 @@ Detailed RTL Component Info :
 Module object2_rom 
 Detailed RTL Component Info : 
 +---Registers : 
-	               14 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
 +---ROMs : 
 	                              ROMs := 1     
 Module object_engine__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     20 Bit       Adders := 7     
+	   2 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 3     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 5     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
++---Muxes : 
+	   7 Input     26 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 42    
+	   4 Input     20 Bit        Muxes := 2     
+	   7 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 61    
+	   4 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
+Module object_engine__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     20 Bit       Adders := 7     
+	   2 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 3     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 5     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
++---Muxes : 
+	   7 Input     26 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 42    
+	   4 Input     20 Bit        Muxes := 2     
+	   7 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 61    
+	   4 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
+Module object_engine__parameterized2 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     26 Bit       Adders := 2     
@@ -862,6 +1111,17 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input      3 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 4     
+Module gameover_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module gameover_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -886,62 +1146,140 @@ INFO: [Synth 8-3886] merging instance 'key_detecter/uut/dataprev_reg[4]' (FDE) t
 INFO: [Synth 8-3886] merging instance 'key_detecter/uut/dataprev_reg[5]' (FDE) to 'key_detecter/uut/keycode_reg[5]'
 INFO: [Synth 8-3886] merging instance 'key_detecter/uut/dataprev_reg[6]' (FDE) to 'key_detecter/uut/keycode_reg[6]'
 INFO: [Synth 8-3886] merging instance 'key_detecter/uut/dataprev_reg[7]' (FDE) to 'key_detecter/uut/keycode_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\btnU_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\extra_up_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\y_start_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\btnU_reg_reg[0] )
+INFO: [Synth 8-3886] merging instance 'pipe3_unit/btnU_reg_reg[1]' (FDC) to 'pipe3_unit/btnU_reg_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe3_unit/\x_start_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\extra_up_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe2_unit/\y_start_reg_reg[18] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'pipe2_unit/btnU_reg_reg[1]' (FDC) to 'pipe2_unit/btnU_reg_reg[0]'
 INFO: [Synth 8-3886] merging instance 'pipe1_unit/btnU_reg_reg[1]' (FDC) to 'pipe1_unit/btnU_reg_reg[0]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (pipe1_unit/\x_dir_reg_reg[0] )
+INFO: [Synth 8-3886] merging instance 'pipe3_unit/x_dir_reg_reg[2]' (FDCE) to 'pipe3_unit/x_dir_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipe3_unit/x_dir_reg_reg[1]' (FDCE) to 'pipe3_unit/x_state_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'pipe3_unit/y_dir_reg_reg[2]' (FDCE) to 'pipe3_unit/y_dir_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipe3_unit/x_state_reg_reg[0]' (FDCE) to 'pipe3_unit/x_state_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pipe2_unit/x_dir_reg_reg[2]' (FDCE) to 'pipe2_unit/x_dir_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipe2_unit/x_dir_reg_reg[1]' (FDCE) to 'pipe2_unit/x_state_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'pipe2_unit/y_dir_reg_reg[2]' (FDCE) to 'pipe2_unit/y_dir_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipe2_unit/x_state_reg_reg[0]' (FDCE) to 'pipe2_unit/x_state_reg_reg[2]'
 INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_dir_reg_reg[2]' (FDCE) to 'pipe1_unit/x_dir_reg_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\x_dir_reg_reg[1] )
+INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_dir_reg_reg[1]' (FDCE) to 'pipe1_unit/x_state_reg_reg[0]'
 INFO: [Synth 8-3886] merging instance 'pipe1_unit/y_dir_reg_reg[2]' (FDCE) to 'pipe1_unit/y_dir_reg_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\y_dir_reg_reg[1] )
 INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_state_reg_reg[0]' (FDCE) to 'pipe1_unit/x_state_reg_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\x_state_reg_reg[2] )
 INFO: [Synth 8-3886] merging instance 'bird_unit/x_dir_reg_reg[2]' (FDCE) to 'bird_unit/x_dir_reg_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (bird_unit/\x_dir_reg_reg[1] )
+INFO: [Synth 8-3886] merging instance 'bird_unit/x_dir_reg_reg[1]' (FDCE) to 'bird_unit/x_state_reg_reg[2]'
 INFO: [Synth 8-3886] merging instance 'bird_unit/y_dir_reg_reg[2]' (FDCE) to 'bird_unit/y_dir_reg_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (bird_unit/\y_dir_reg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (bird_unit/\x_state_reg_reg[2] )
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/y_dir_reg_reg[1]' (FDCE) to 'pipe1_unit/y_dir_reg_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\y_dir_reg_reg[0] )
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[19]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[0]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[18]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[17]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[16]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[15]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[14]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[13]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[12]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[11]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[10]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[9]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[8]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[7]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[5]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[4]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[3]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/jump_t_reg_reg[2]' (FDCE) to 'pipe1_unit/jump_t_reg_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\jump_t_reg_reg[1] )
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_dir_reg_reg[1]' (FDCE) to 'pipe1_unit/y_state_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/y_state_reg_reg[0]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[0]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[1]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[2]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[3]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[4]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[5]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[6]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[7]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[9]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[11]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[14]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[15]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[16]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_time_reg_reg[17]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pipe1_unit/x_state_reg_reg[2]' (FDCE) to 'pipe1_unit/y_state_reg_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pipe1_unit/\y_state_reg_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 789.609 ; gain = 528.352
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:46 ; elapsed = 00:05:48 . Memory (MB): peak = 865.148 ; gain = 603.668
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance object_rom_unit1/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -949,6 +1287,37 @@ INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_2 (impleme
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance gameover_display_unit/gameover_rom_unit/i_0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -959,7 +1328,7 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 789.609 ; gain = 528.352
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:52 ; elapsed = 00:05:55 . Memory (MB): peak = 885.504 ; gain = 624.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -970,6 +1339,18 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance background_unit/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance object_rom_unit1/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -977,8 +1358,40 @@ INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_2 (implemented
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit1/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit2/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance pipe_rom_unit3/i_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance gameover_display_unit/gameover_rom_unit/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 807.742 ; gain = 546.484
+Finished Technology Mapping : Time (s): cpu = 00:05:54 ; elapsed = 00:05:57 . Memory (MB): peak = 908.180 ; gain = 646.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -996,7 +1409,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
+Finished IO Insertion : Time (s): cpu = 00:05:55 ; elapsed = 00:05:58 . Memory (MB): peak = 908.180 ; gain = 646.699
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1009,7 +1422,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:55 ; elapsed = 00:05:58 . Memory (MB): peak = 908.180 ; gain = 646.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1021,7 +1434,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:55 ; elapsed = 00:05:58 . Memory (MB): peak = 908.180 ; gain = 646.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1034,82 +1447,119 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----------+------+
-|      |Cell       |Count |
-+------+-----------+------+
-|1     |BUFG       |     1|
-|2     |CARRY4     |   152|
-|3     |LUT1       |   149|
-|4     |LUT2       |   330|
-|5     |LUT3       |    53|
-|6     |LUT4       |   124|
-|7     |LUT5       |   178|
-|8     |LUT6       |   297|
-|9     |MUXF7      |     7|
-|10    |RAMB36E1   |     1|
-|11    |RAMB36E1_1 |     1|
-|12    |RAMB36E1_2 |     1|
-|13    |RAMB36E1_3 |     1|
-|14    |RAMB36E1_4 |     1|
-|15    |RAMB36E1_5 |     1|
-|16    |RAMB36E1_6 |     1|
-|17    |FDCE       |   174|
-|18    |FDPE       |     7|
-|19    |FDRE       |   100|
-|20    |IBUF       |     4|
-|21    |OBUF       |    27|
-|22    |OBUFT      |     1|
-+------+-----------+------+
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |CARRY4      |   267|
+|3     |LUT1        |   172|
+|4     |LUT2        |   317|
+|5     |LUT3        |    76|
+|6     |LUT4        |   357|
+|7     |LUT5        |   179|
+|8     |LUT6        |   314|
+|9     |MUXF7       |     2|
+|10    |RAMB36E1    |     1|
+|11    |RAMB36E1_1  |     1|
+|12    |RAMB36E1_10 |     1|
+|13    |RAMB36E1_11 |     1|
+|14    |RAMB36E1_12 |     1|
+|15    |RAMB36E1_13 |     3|
+|16    |RAMB36E1_14 |     3|
+|17    |RAMB36E1_15 |     3|
+|18    |RAMB36E1_16 |     3|
+|19    |RAMB36E1_17 |     3|
+|20    |RAMB36E1_18 |     3|
+|21    |RAMB36E1_19 |     3|
+|22    |RAMB36E1_2  |     1|
+|23    |RAMB36E1_20 |     3|
+|24    |RAMB36E1_21 |     3|
+|25    |RAMB36E1_22 |     3|
+|26    |RAMB36E1_23 |     3|
+|27    |RAMB36E1_24 |     3|
+|28    |RAMB36E1_25 |     1|
+|29    |RAMB36E1_3  |     1|
+|30    |RAMB36E1_4  |     1|
+|31    |RAMB36E1_5  |     1|
+|32    |RAMB36E1_6  |     1|
+|33    |RAMB36E1_7  |     1|
+|34    |RAMB36E1_8  |     1|
+|35    |RAMB36E1_9  |     1|
+|36    |FDCE        |   163|
+|37    |FDPE        |    29|
+|38    |FDRE        |   413|
+|39    |FDSE        |    51|
+|40    |LD          |    30|
+|41    |IBUF        |     8|
+|42    |OBUF        |    27|
+|43    |OBUFT       |     1|
++------+------------+------+
 
 Report Instance Areas: 
-+------+-------------------+------------------------------+------+
-|      |Instance           |Module                        |Cells |
-+------+-------------------+------------------------------+------+
-|1     |top                |                              |  1611|
-|2     |  vsync_unit       |vga_sync                      |    57|
-|3     |  object_rom_unit1 |object1_rom                   |     1|
-|4     |  bird_unit        |object_engine                 |   870|
-|5     |  pipe_rom_unit1   |object2_rom                   |     6|
-|6     |  pipe1_unit       |object_engine__parameterized0 |    73|
-|7     |  is_collideUpper  |is_collide__1                 |    90|
-|8     |  is_collideLower  |is_collide__2                 |    88|
-|9     |  is_collide1      |is_collide                    |    91|
-|10    |  score_dispaly    |score_display                 |   122|
-|11    |    show           |seg_display                   |    91|
-|12    |      ddd          |DecimalDigitDecoder           |    49|
-|13    |  key_detecter     |key_detect                    |   146|
-|14    |    uut            |PS2Receiver                   |    79|
-|15    |      db_clk       |debouncer__1                  |    16|
-|16    |      db_data      |debouncer                     |    16|
-|17    |    up_fsm         |key_fsm                       |     6|
-|18    |    left_fsm       |key_fsm__parameterized0       |     6|
-|19    |    down_fsm       |key_fsm__parameterized1       |     6|
-|20    |    right_fsm      |key_fsm__parameterized2       |     6|
-|21    |    space_fsm      |key_fsm__parameterized3       |     6|
-|22    |  game_FSM         |game_state_machine            |     8|
-+------+-------------------+------------------------------+------+
++------+------------------------+------------------------------+------+
+|      |Instance                |Module                        |Cells |
++------+------------------------+------------------------------+------+
+|1     |top                     |                              |  2457|
+|2     |  vsync_unit            |vga_sync                      |    57|
+|3     |  background_unit       |background_rom                |    12|
+|4     |  translate1            |translate                     |    75|
+|5     |  translate2            |translate__parameterized0     |    75|
+|6     |  translate3            |translate__parameterized1     |    75|
+|7     |  rh1                   |random_height__1              |   130|
+|8     |    r                   |thirty_bit_lfsr__1            |    32|
+|9     |  rh2                   |random_height__2              |   130|
+|10    |    r                   |thirty_bit_lfsr__2            |    32|
+|11    |  rh3                   |random_height                 |   130|
+|12    |    r                   |thirty_bit_lfsr               |    32|
+|13    |  object_rom_unit1      |object1_rom                   |     1|
+|14    |  bird_unit             |object_engine                 |   597|
+|15    |  pipe_rom_unit1        |object2_rom__1                |    12|
+|16    |  pipe1_unit            |object_engine__parameterized0 |   112|
+|17    |  pipe_rom_unit2        |object2_rom__2                |    12|
+|18    |  pipe2_unit            |object_engine__parameterized1 |   112|
+|19    |  pipe_rom_unit3        |object2_rom                   |    12|
+|20    |  pipe3_unit            |object_engine__parameterized2 |   112|
+|21    |  is_collideUpper       |is_collide__1                 |    45|
+|22    |  is_collideLower       |is_collide__2                 |    43|
+|23    |  is_collide1           |is_collide__3                 |   104|
+|24    |  is_collide2           |is_collide__4                 |   104|
+|25    |  is_collide3           |is_collide                    |   104|
+|26    |  generator             |score_generator               |    71|
+|27    |  score_dispaly         |score_display                 |    91|
+|28    |    show                |seg_display                   |    91|
+|29    |      ddd               |DecimalDigitDecoder           |    49|
+|30    |  key_detecter          |key_detect                    |   122|
+|31    |    uut                 |PS2Receiver                   |    79|
+|32    |      db_clk            |debouncer__1                  |    16|
+|33    |      db_data           |debouncer                     |    16|
+|34    |    up_fsm              |key_fsm                       |     6|
+|35    |  game_FSM              |game_state_machine            |    11|
+|36    |  gameover_display_unit |gameover_display              |    17|
+|37    |    gameover_rom_unit   |gameover_rom                  |     1|
++------+------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:55 ; elapsed = 00:05:58 . Memory (MB): peak = 908.180 ; gain = 646.699
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 807.742 ; gain = 283.367
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 807.742 ; gain = 546.484
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:35 ; elapsed = 00:05:51 . Memory (MB): peak = 908.180 ; gain = 379.117
+Synthesis Optimization Complete : Time (s): cpu = 00:05:55 ; elapsed = 00:05:58 . Memory (MB): peak = 908.180 ; gain = 646.699
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 349 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 807.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 908.180 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 30 instances were transformed.
+  LD => LDCE: 30 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-241 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+444 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 807.742 ; gain = 559.258
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 807.742 ; gain = 0.000
+synth_design: Time (s): cpu = 00:05:57 ; elapsed = 00:06:01 . Memory (MB): peak = 908.180 ; gain = 659.965
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 908.180 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jimi1/Documents/GitHub/FPGA_Game_Engine/FPGA_Game_Engine.runs/synth_1/display_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file display_top_utilization_synth.rpt -pb display_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May  1 16:12:41 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed May  1 19:17:28 2019...
