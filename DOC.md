@@ -1,6 +1,4 @@
-**Dear TAs and Instructors,**
-
-Thanks for giving us the opportunity for demonstrating our project. We did want to do a good final project, as well as a good demo. In case of the limitation of our short demonstration, we’d like to give a more detailed overview and explanation of our project. 
+# Documentation on our project design
 
 Our basic philosophy of design is to make a modular, easy-to-use, and flexible hardware game engine for FPGA gaming development. In order to achieve it, we broke it into a clear file structure with different functionality for each part: ROMs, basic helper modules, display modules, keyboard, object control, game control, and seven-segment display. Unfortunately, our final simple Flappy Bird demo still has some bugs, but we did several small demos and a lot of unit tests and we think our modules perform each of their own functions perfectly well.
 
