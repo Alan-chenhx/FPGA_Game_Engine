@@ -6,7 +6,16 @@ A game engine built with verilog operates on FPGA board
 ![Badge](https://img.shields.io/badge/捞-007.uiuc-%23FF4D5B.svg)
 
 ## The project is based on the Basys3 programing board and finished the functions below
+- VGA output
 - Rom
   - generating roms from BMP to 12 bites color rom (in python)
   - a rom reader (in verilog)
-- 
+- Game control
+  - a finite state machine 
+- Object
+  - generating 2-D object on the screen 
+  - object movement (control / auto )
+  - object collisions 
+ - Keyboard
+  - enables 26 alphabet and 4 control-arrows
+  
