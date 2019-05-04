@@ -18,4 +18,5 @@ A game engine built with verilog operates on FPGA board
   - object collisions 
  - Keyboard
    - enables 26 alphabet and 4 control-arrows
+ - a simple demo of flappy bird
   
