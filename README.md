@@ -17,5 +17,5 @@ A game engine built with verilog operates on FPGA board
   - object movement (control / auto )
   - object collisions 
  - Keyboard
-  - enables 26 alphabet and 4 control-arrows
+   - enables 26 alphabet and 4 control-arrows
   
