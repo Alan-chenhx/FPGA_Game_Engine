@@ -7,6 +7,6 @@ A game engine built with verilog operates on FPGA board
 
 ## The project is based on the Basys3 programing board and finished the functions below
 - Rom
-- - generating roms from BMP to 12 bites color rom (in python)
-- - a rom reader (in verilog)
+  - generating roms from BMP to 12 bites color rom (in python)
+  - a rom reader (in verilog)
 - 
